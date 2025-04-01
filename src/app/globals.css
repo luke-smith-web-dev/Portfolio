@@ -73,18 +73,17 @@ h3 {
 
 .scrolls {
   overflow-x: scroll;
-  overflow-y: hidden;
   white-space: nowrap;
   padding-left: 170px;
 }
 
-.scrolls > * {
-  box-shadow: 1px 1px 10px #999;
+.scrolls-div {
   margin: 2px;
   height: 50vh;
   display: inline-block;
   vertical-align: top;
   margin: 0 30px;
+  width: 400px;
 }
 
 a {
