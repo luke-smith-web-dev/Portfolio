@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter";
+  letter-spacing: -0.1em;
+  margin: 0;
+}
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px #808080 solid;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1000;
+}
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+.block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  min-height: 300px;
+}
+
+h1 {
+  @apply text-5xl font-bold;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  @apply text-5xl font-bold;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.12em;
+  font-weight: 500;
+}
+
+h3 {
+  @apply text-xl font-bold;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blur,
+.blur-hover {
+  @apply blur-[3px];
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.blur-xl-hover {
+  @apply blur-[5px];
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.blur-hover:hover,
+.blur-xl-hover:hover {
+  @apply blur-none;
+  opacity: 1;
+}
+
+.scrolls {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-left: 170px;
+}
+
+.scrolls > * {
+  box-shadow: 1px 1px 10px #999;
+  margin: 2px;
+  height: 50vh;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 30px;
+}
+
+a {
+  opacity: 0.5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.black-link {
+  opacity: 1 !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+  visibility: hidden;
+}
+
+.split-word {
+  will-change: transform, opacity;
+}
+
+.op-class {
+  opacity: 0;
+}
+
+.fadeInSlow {
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
