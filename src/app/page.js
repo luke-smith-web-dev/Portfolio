@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <div ref={(el) => (container = el)}>
       <nav
-        className="fixed top-0 left-0 right-0 flex items-center justify-between p-5 px-[200px] bg-white"
+        className="fixed top-0 left-0 right-0 flex sm:flex-row flex-col gap-5 items-center justify-between p-5 sm:px-[200px] bg-white px-[20px]"
         data-aos="fade"
         data-aos-duration="2000"
         style={{ zIndex: 100 }}

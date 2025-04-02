@@ -4,6 +4,7 @@ body {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.08em;
   margin: 0;
+  width: 100vw;
 }
 
 .custom-cursor {
@@ -20,19 +21,6 @@ body {
 }
 .custom-cursor--link {
   transform: translate(-50%, -50%) scale(1.5);
-}
-.block {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 80vh;
-  min-height: 300px;
 }
 
 h1 {
