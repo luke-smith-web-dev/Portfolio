@@ -121,9 +121,7 @@ export default function Home() {
 
     rows.forEach((row, index) => {
       const direction = index % 2 === 0 ? "+=100" : "-=100"; // Alternate directions
-      gsap.from(row, {
-        x: -row.offsetWidth + 800,
-      });
+
       gsap.to(row, {
         x: direction,
         scrollTrigger: {
