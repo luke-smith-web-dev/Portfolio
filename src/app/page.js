@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -292,7 +293,7 @@ export default function Home() {
             <span className="opacity-50 text-sm">what i do</span>
             <HTwoAnimateIn>expertise</HTwoAnimateIn>
           </div>
-          <img
+          <Image
             src={expertiseImage}
             style={{
               background: "lightgray",
@@ -300,7 +301,7 @@ export default function Home() {
               width: "100%",
               height: "300px",
             }}
-          ></img>
+          ></Image>
         </div>
         <div className="w-full flex flex-col justify-between items-end">
           <h3>design</h3>
@@ -344,7 +345,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-5">
           <div>
-            <img
+            <Image
               src="/project-images/portfolio.png"
               style={{
                 background: "lightgray",
@@ -355,7 +356,7 @@ export default function Home() {
               data-aos="fade"
               data-aos-duration="1500"
               className="sm:h-[620px] h-[250px]"
-            ></img>
+            ></Image>
 
             <div className="flex justify-between">
               <div>
@@ -369,7 +370,7 @@ export default function Home() {
 
           <div className="flex gap-5 sm:flex-row flex-col">
             <div className="w-full">
-              <img
+              <Image
                 src="/project-images/ignity-labs.avif"
                 style={{
                   background: "lightgray",
@@ -380,7 +381,7 @@ export default function Home() {
                 data-aos="fade"
                 data-aos-duration="1500"
                 className="sm:h-[50vh] h-[250px]"
-              ></img>
+              ></Image>
 
               <div className="flex justify-between">
                 <div>
@@ -390,7 +391,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full">
-              <img
+              <Image
                 src="/project-images/feectory.avif"
                 style={{
                   background: "lightgray",
@@ -401,7 +402,7 @@ export default function Home() {
                 data-aos="fade"
                 data-aos-duration="1500"
                 className="sm:h-[50vh] h-[250px]"
-              ></img>
+              ></Image>
 
               <div className="flex justify-between">
                 <div>
@@ -415,7 +416,7 @@ export default function Home() {
           </div>
 
           <div className="w-full">
-            <img
+            <Image
               src="/project-images/emailmarketinghub.webp"
               style={{
                 background: "lightgray",
@@ -426,7 +427,7 @@ export default function Home() {
               data-aos="fade"
               data-aos-duration="1500"
               className="sm:h-[650px] h-[250px]"
-            ></img>
+            ></Image>
 
             <div className="flex justify-between">
               <div>
@@ -446,37 +447,37 @@ export default function Home() {
         data-aos-duration="1500"
       >
         <div className="image-row row-1">
-          <img src="/project-images/portfolio.png" alt="Image 1" />
-          <img src="/project-images/lsmd-branding-3.png" alt="Image 2" />
-          <img src="/project-images/creative-direction.png" alt="Image 3" />
-          <img src="/project-images/emailmarketinghub.webp" alt="Image 1" />
-          <img src="/project-images/feectory.avif" alt="Image 2" />
-          <img src="/project-images/graphic-poster.png" alt="Image 3" />
-          <img src="/project-images/lsmd-branding-2.png" alt="Image 1" />
-          <img src="/project-images/ignity-labs.avif" alt="Image 2" />
-          <img src="/project-images/illustration-airpods.png" alt="Image 3" />
+          <Image src="/project-images/portfolio.png" alt="Image 1" />
+          <Image src="/project-images/lsmd-branding-3.png" alt="Image 2" />
+          <Image src="/project-images/creative-direction.png" alt="Image 3" />
+          <Image src="/project-images/emailmarketinghub.webp" alt="Image 1" />
+          <Image src="/project-images/feectory.avif" alt="Image 2" />
+          <Image src="/project-images/graphic-poster.png" alt="Image 3" />
+          <Image src="/project-images/lsmd-branding-2.png" alt="Image 1" />
+          <Image src="/project-images/ignity-labs.avif" alt="Image 2" />
+          <Image src="/project-images/illustration-airpods.png" alt="Image 3" />
         </div>
         <div className="image-row row-2">
-          <img src="/project-images/logo-nike.png" alt="Image 1" />
-          <img src="/project-images/lsmd-branding-4.png" alt="Image 2" />
-          <img src="/project-images/motion-hero.png" alt="Image 3" />
-          <img src="/project-images/product-phone.png" alt="Image 1" />
-          <img src="/project-images/strategy.png" alt="Image 2" />
-          <img src="/project-images/ui-ux-hero.png" alt="Image 3" />
-          <img src="/project-images/blackform-hero.png" alt="Image 1" />
-          <img src="/project-images/pulse-ai-branding-2.png" alt="Image 2" />
-          <img src="/project-images/logo.png" alt="Image 3" />
+          <Image src="/project-images/logo-nike.png" alt="Image 1" />
+          <Image src="/project-images/lsmd-branding-4.png" alt="Image 2" />
+          <Image src="/project-images/motion-hero.png" alt="Image 3" />
+          <Image src="/project-images/product-phone.png" alt="Image 1" />
+          <Image src="/project-images/strategy.png" alt="Image 2" />
+          <Image src="/project-images/ui-ux-hero.png" alt="Image 3" />
+          <Image src="/project-images/blackform-hero.png" alt="Image 1" />
+          <Image src="/project-images/pulse-ai-branding-2.png" alt="Image 2" />
+          <Image src="/project-images/logo.png" alt="Image 3" />
         </div>
         <div className="image-row row-3">
-          <img src="/project-images/lsmd-branding.png" alt="Image 1" />
-          <img src="/project-images/id-lamp.png" alt="Image 2" />
-          <img src="/project-images/art-direction.png" alt="Image 3" />
-          <img src="/project-images/mobile-development.png" alt="Image 1" />
-          <img src="/project-images/note-app.png" alt="Image 2" />
-          <img src="/project-images/pulse-ai-branding.png" alt="Image 3" />
-          <img src="/project-images/lsmd-branding-5.png" alt="Image 1" />
-          <img src="/project-images/launch-hero.png" alt="Image 2" />
-          <img src="/project-images/titan.png" alt="Image 3" />
+          <Image src="/project-images/lsmd-branding.png" alt="Image 1" />
+          <Image src="/project-images/id-lamp.png" alt="Image 2" />
+          <Image src="/project-images/art-direction.png" alt="Image 3" />
+          <Image src="/project-images/mobile-development.png" alt="Image 1" />
+          <Image src="/project-images/note-app.png" alt="Image 2" />
+          <Image src="/project-images/pulse-ai-branding.png" alt="Image 3" />
+          <Image src="/project-images/lsmd-branding-5.png" alt="Image 1" />
+          <Image src="/project-images/launch-hero.png" alt="Image 2" />
+          <Image src="/project-images/titan.png" alt="Image 3" />
         </div>
       </div>
 
@@ -511,10 +512,10 @@ export default function Home() {
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div class="flex justify-between flex-col h-full">
             <div>
-              <img
+              <Image
                 src="https://framerusercontent.com/images/1ZdNG7oT7VBoc2ut3GnetNtvloQ.jpg"
                 className="w-[60px] rounded-full"
-              ></img>
+              ></Image>
               <br />
               <p style={{ textWrap: "wrap" }}>
                 Luke did a phenomenal job with our logo project. He took the
@@ -537,10 +538,10 @@ export default function Home() {
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div class="flex justify-between flex-col h-full">
             <div>
-              <img
+              <Image
                 src="https://framerusercontent.com/images/1JSgdTAQHLoAMeGInf3Llrgz4Ww.jpg"
                 className="w-[60px] rounded-full"
-              ></img>
+              ></Image>
               <br />
               <p style={{ textWrap: "wrap" }}>
                 Luke did an amazing job creating a logo for my SaaS! He provided
@@ -561,10 +562,10 @@ export default function Home() {
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div class="flex justify-between flex-col h-full">
             <div>
-              <img
+              <Image
                 src="https://framerusercontent.com/images/CjEDzJM042aradMYa8BjRga4DHU.png"
                 className="w-[60px] rounded-full"
-              ></img>
+              ></Image>
               <br />
               <p style={{ textWrap: "wrap" }}>
                 Luke Smith is an incredible designer with a sharp eye for detail
