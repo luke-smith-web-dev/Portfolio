@@ -3,8 +3,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import HTwoAnimateIn from "./HTwoAnimateIn";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   let container = useRef(null);
@@ -110,6 +113,26 @@ export default function Home() {
 
       initCursor = false;
     };
+  }, []);
+
+  useEffect(() => {
+    const rows = document.querySelectorAll(".image-row");
+
+    rows.forEach((row, index) => {
+      const direction = index % 2 === 0 ? "+=100" : "-=100"; // Alternate directions
+      gsap.from(row, {
+        x: -row.offsetWidth + 800,
+      });
+      gsap.to(row, {
+        x: direction,
+        scrollTrigger: {
+          trigger: row,
+          start: "top bottom", // Start when the row enters the viewport
+          end: "bottom top", // End when the row leaves the viewport
+          scrub: true, // Smooth scrolling effect
+        },
+      });
+    });
   }, []);
 
   return (
@@ -414,6 +437,46 @@ export default function Home() {
               </span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div
+        className="scrolling-images-section pt-40"
+        data-aos="fade"
+        data-aos-duration="1500"
+      >
+        <div className="image-row row-1">
+          <img src="/project-images/portfolio.png" alt="Image 1" />
+          <img src="/project-images/lsmd-branding-3.png" alt="Image 2" />
+          <img src="/project-images/creative-direction.png" alt="Image 3" />
+          <img src="/project-images/emailmarketinghub.webp" alt="Image 1" />
+          <img src="/project-images/feectory.avif" alt="Image 2" />
+          <img src="/project-images/graphic-poster.png" alt="Image 3" />
+          <img src="/project-images/lsmd-branding-2.png" alt="Image 1" />
+          <img src="/project-images/ignity-labs.avif" alt="Image 2" />
+          <img src="/project-images/illustration-airpods.png" alt="Image 3" />
+        </div>
+        <div className="image-row row-2">
+          <img src="/project-images/logo-nike.png" alt="Image 1" />
+          <img src="/project-images/lsmd-branding-4.png" alt="Image 2" />
+          <img src="/project-images/motion-hero.png" alt="Image 3" />
+          <img src="/project-images/product-phone.png" alt="Image 1" />
+          <img src="/project-images/strategy.png" alt="Image 2" />
+          <img src="/project-images/ui-ux-hero.png" alt="Image 3" />
+          <img src="/project-images/blackform-hero.png" alt="Image 1" />
+          <img src="/project-images/pulse-ai-branding-2.png" alt="Image 2" />
+          <img src="/project-images/logo.png" alt="Image 3" />
+        </div>
+        <div className="image-row row-3">
+          <img src="/project-images/lsmd-branding.png" alt="Image 1" />
+          <img src="/project-images/id-lamp.png" alt="Image 2" />
+          <img src="/project-images/art-direction.png" alt="Image 3" />
+          <img src="/project-images/mobile-development.png" alt="Image 1" />
+          <img src="/project-images/note-app.png" alt="Image 2" />
+          <img src="/project-images/pulse-ai-branding.png" alt="Image 3" />
+          <img src="/project-images/lsmd-branding-5.png" alt="Image 1" />
+          <img src="/project-images/launch-hero.png" alt="Image 2" />
+          <img src="/project-images/titan.png" alt="Image 3" />
         </div>
       </div>
 
