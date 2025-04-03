@@ -64,7 +64,6 @@ h3 {
 .scrolls {
   overflow-x: scroll;
   white-space: nowrap;
-  padding-left: 170px;
 }
 
 .scrolls-div {
@@ -73,7 +72,6 @@ h3 {
   display: inline-block;
   vertical-align: top;
   margin: 0 30px;
-  width: 400px;
 }
 
 a {

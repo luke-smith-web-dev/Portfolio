@@ -10,8 +10,65 @@ export default function Home() {
   let container = useRef(null);
 
   const [expertiseImage, setExpertiseImage] = useState(
-    "/project-images/id-lamp.png"
+    "/project-images/art-direction.png"
   );
+
+  // Add this function at the top of your file or in a separate utility file
+  function scrambleText(element, textContent, duration = 500) {
+    const originalText = textContent;
+    const reverseInterval = 100; // Interval between each character change
+    let elapsed = 0;
+    let reversed = false;
+
+    const interval = setInterval(() => {
+      const progress = Math.min(elapsed / duration, 1); // Ensure progress doesn't exceed 1
+      const currentLength = Math.ceil(progress * originalText.length);
+
+      if (progress >= 1 && reversed) {
+        clearInterval(interval);
+        element.textContent = originalText; // Restore original text
+      } else if (!reversed) {
+        // Reverse the text one character at a time
+        const reversedPart = originalText
+          .split("")
+          .slice(0, currentLength)
+          .reverse()
+          .join("");
+        const remainingPart = originalText.slice(currentLength);
+        element.textContent = reversedPart + remainingPart;
+
+        if (currentLength >= originalText.length) reversed = true;
+      } else {
+        // Restore the text one character at a time
+        const restoredPart = originalText.slice(0, currentLength);
+        const reversedPart = originalText
+          .split("")
+          .slice(currentLength)
+          .reverse()
+          .join("");
+        element.textContent = restoredPart + reversedPart;
+      }
+
+      elapsed += reverseInterval;
+    }, reverseInterval);
+  }
+
+  // Attach the effect to all links, h2, and h1 tags
+  useEffect(() => {
+    const elements = document.querySelectorAll("a:not(.logo)");
+    elements.forEach((element) => {
+      let originalText = element.textContent;
+      element.addEventListener("mouseenter", () =>
+        scrambleText(element, originalText)
+      );
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        element.removeEventListener("mouseenter", () => scrambleText(element));
+      });
+    };
+  }, []);
 
   useEffect(() => {
     AOS.init();
@@ -56,14 +113,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={(el) => (container = el)}>
+    <div ref={(el) => (container = el)} style={{ overflowX: "hidden" }}>
       <nav
         className="fixed top-0 left-0 right-0 flex sm:flex-row flex-col gap-5 items-center justify-between p-5 sm:px-[200px] bg-white px-[20px]"
         data-aos="fade"
         data-aos-duration="2000"
         style={{ zIndex: 100 }}
       >
-        <a href="#top" className="black-link">
+        <a href="#top" className="black-link logo">
           <svg
             width="100"
             height="auto"
@@ -113,9 +170,9 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="flex flex-col h-lvh justify-between">
-        <div className="flex justify-between w-full px-[200px] pt-20">
-          <div className="flex flex-col justify-end">
+      <div className="flex flex-col sm:h-lvh h-max justify-between">
+        <div className="flex justify-between w-full sm:px-[200px] px-[20px] pt-30">
+          <div className="hidden sm:flex flex-col justify-end">
             <h2 className="blur-xl-hover">industrial design</h2>
             <h2 className="blur-xl-hover">ui/ux design</h2>
             <h2 className="blur-xl-hover">graphic design</h2>
@@ -149,10 +206,9 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-end sm:h-lvh sm:mt-0 mt-[220px]">
           <svg
             width="100%"
-            height="auto"
             viewBox="0 0 1440 278"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -191,23 +247,25 @@ export default function Home() {
               fill="black"
             />
           </svg>
-          <div className="flex justify-between items-end">
-            <div className="pl-[50px]">
-              <h2 className="blur-hover">Based in Missoula, MT</h2>
+          <div className="flex justify-between items-end sm:flex-row flex-col">
+            <div className="sm:pl-[50px] pl-0">
+              <h2 className="sm:block hidden blur-hover">
+                Based in Missoula, MT
+              </h2>
             </div>
-            <h1>Multidisciplinary Designer</h1>
+            <h1 className="sm:mt-0 mt-5">Multidisciplinary Designer</h1>
           </div>
           <br />
         </div>
       </div>
 
       <div
-        className="px-[200px] py-40 flex justify-between"
+        className="sm:px-[200px] px-[50px] py-40 flex justify-between flex-col sm:flex-row"
         data-aos="fade"
         data-aos-duration="1500"
       >
-        <div className="w-full flex flex-col justify-between">
-          <div>
+        <div className="w-full flex flex-col justify-between mb-10">
+          <div className="mb-10">
             <span className="opacity-50 text-sm">what i do</span>
             <HTwoAnimateIn>expertise</HTwoAnimateIn>
           </div>
@@ -223,105 +281,35 @@ export default function Home() {
         </div>
         <div className="w-full flex flex-col justify-between items-end">
           <h3>design</h3>
-          <span
-            onMouseOver={() => setExpertiseImage("/project-images/id-lamp.png")}
-          >
-            industrial design
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/ui-ux-hero.png")
-            }
-          >
-            ui/ux design
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/product-phone.png")
-            }
-          >
-            product design
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/graphic-poster.png")
-            }
-          >
-            graphic design
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/motion-hero.png")
-            }
-          >
-            motion design
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/logo-nike.png")
-            }
-          >
-            logo design
-          </span>
+          <span>industrial design</span>
+          <span>ui/ux design</span>
+          <span>product design</span>
+          <span>graphic design</span>
+          <span>motion design</span>
+          <span>logo design</span>
 
           <br />
           <br />
           <br />
 
           <h3>technology</h3>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/portfolio.png")
-            }
-          >
-            web development
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/mobile-development.png")
-            }
-          >
-            mobile development
-          </span>
+          <span>web development</span>
+          <span>mobile development</span>
 
           <br />
           <br />
           <br />
 
           <h3>art</h3>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/strategy.png")
-            }
-          >
-            stategy
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/art-direction.png")
-            }
-          >
-            art direction
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/illustration-airpods.png")
-            }
-          >
-            illustration
-          </span>
-          <span
-            onMouseOver={() =>
-              setExpertiseImage("/project-images/creative-direction.png")
-            }
-          >
-            creative direction
-          </span>
+          <span>stategy</span>
+          <span>art direction</span>
+          <span>illustration</span>
+          <span>creative direction</span>
         </div>
       </div>
 
       <div
-        className="px-[200px] py-40"
+        className="sm:px-[200px] px-[50px] py-40"
         data-aos="fade"
         data-aos-duration="1500"
         id="proj"
@@ -339,22 +327,24 @@ export default function Home() {
                 background: "lightgray",
                 objectFit: "cover",
                 width: "100%",
-                height: "620px",
                 marginBottom: "10px",
               }}
               data-aos="fade"
               data-aos-duration="1500"
+              className="sm:h-[620px] h-[250px]"
             ></img>
 
             <div className="flex justify-between">
               <div>
                 <h3>Luke Smith Design • Portfolio '25</h3>
               </div>
-              <span>creative direction, web design, web development</span>
+              <span className="sm:block hidden">
+                creative direction, web design, web development
+              </span>
             </div>
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 sm:flex-row flex-col">
             <div className="w-full">
               <img
                 src="/project-images/ignity-labs.avif"
@@ -362,18 +352,18 @@ export default function Home() {
                   background: "lightgray",
                   objectFit: "cover",
                   width: "100%",
-                  height: "50vh",
                   marginBottom: "10px",
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
+                className="sm:h-[50vh] h-[250px]"
               ></img>
 
               <div className="flex justify-between">
                 <div>
                   <h3>Ignty Labs</h3>
                 </div>
-                <span>web design</span>
+                <span className="sm:block hidden">web design</span>
               </div>
             </div>
             <div className="w-full">
@@ -383,18 +373,20 @@ export default function Home() {
                   background: "lightgray",
                   objectFit: "cover",
                   width: "100%",
-                  height: "50vh",
                   marginBottom: "10px",
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
+                className="sm:h-[50vh] h-[250px]"
               ></img>
 
               <div className="flex justify-between">
                 <div>
                   <h3>Feectory</h3>
                 </div>
-                <span>creative direction, logo design, graphic design</span>
+                <span className="sm:block hidden">
+                  creative direction, logo design, graphic design
+                </span>
               </div>
             </div>
           </div>
@@ -406,25 +398,27 @@ export default function Home() {
                 background: "lightgray",
                 objectFit: "cover",
                 width: "100%",
-                height: "90vh",
                 marginBottom: "10px",
               }}
               data-aos="fade"
               data-aos-duration="1500"
+              className="sm:h-[650px] h-[250px]"
             ></img>
 
             <div className="flex justify-between">
               <div>
                 <h3>The Email Marketing Hub</h3>
               </div>
-              <span>creative direction, web design</span>
+              <span className="sm:block hidden">
+                creative direction, web design
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       <div
-        className="px-[200px] py-40"
+        className="sm:px-[200px] px-[50px] py-40"
         data-aos="fade"
         data-aos-duration="1500"
         id="about"
@@ -442,7 +436,7 @@ export default function Home() {
       </div>
 
       <div
-        className="px-[200px] pt-40 pb-10"
+        className="sm:px-[200px] px-[50px] pt-40 pb-10"
         data-aos="fade"
         data-aos-duration="1500"
         id="testimonials"
@@ -450,8 +444,8 @@ export default function Home() {
         <span className="opacity-50 text-sm">what they say</span>
         <HTwoAnimateIn>testimonials</HTwoAnimateIn>
       </div>
-      <div className="scrolls mb-40">
-        <div className="p-5 border border-gray-200 rounded-sm scrolls-div">
+      <div className="scrolls mb-40 sm:pl-[170px] pl-[0px]">
+        <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div class="flex justify-between flex-col h-full">
             <div>
               <img
@@ -477,7 +471,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="p-5 border border-gray-200 rounded-sm scrolls-div">
+        <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div class="flex justify-between flex-col h-full">
             <div>
               <img
@@ -501,7 +495,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="p-5 border border-gray-200 rounded-sm scrolls-div">
+        <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div class="flex justify-between flex-col h-full">
             <div>
               <img
@@ -525,7 +519,7 @@ export default function Home() {
       </div>
 
       <div
-        className="h-lvh w-full bg-[url(/contact-bg.png)] bg-center flex flex-col items-center justify-center gap-2 text-white"
+        className="sm:h-lvh h-[80vh] w-full bg-[url(/contact-bg.png)] bg-center flex flex-col items-center justify-center gap-2 text-white"
         data-aos="fade"
         data-aos-duration="1500"
         id="connect"
@@ -536,8 +530,8 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <div className="flex justify-between w-full px-[200px]">
-          <div className="flex flex-col">
+        <div className="flex justify-between w-full sm:px-[200px] px-[50px] sm:flex-row flex-col">
+          <div className="flex flex-col sm:mb-0 mb-10">
             <span>contact</span>
             <a
               href="mailto:2lukesmith@gmail.com"
@@ -556,13 +550,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-[200px] px-20 flex justify-between">
-        <div>
+      <div className="sm:py-[200px] pt-[200px] pb-[100px] sm:flex-row flex-col px-20 flex justify-between">
+        <div className="sm:mb-0 mb-10">
           <h1>Luke Smith</h1>
           <br />
           <p>Multidisciplinary designer based in Missoula, MT</p>
         </div>
-        <div>
+        <div className="sm:mb-0 mb-10">
           <span>on-site</span>
           <br />
           <a href="#top">home</a>
@@ -575,7 +569,7 @@ export default function Home() {
           <br />
           <a href="#connect">contact</a>
         </div>
-        <div>
+        <div className="sm:mb-0 mb-10">
           <span>socials</span>
           <br />
           <a
@@ -602,7 +596,7 @@ export default function Home() {
             LinkedIn
           </a>
         </div>
-        <div>
+        <div className="sm:mb-0 mb-10">
           <span>contact</span>
           <br />
 
