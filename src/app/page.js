@@ -5,56 +5,92 @@ import HTwoAnimateIn from "./HTwoAnimateIn";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
+import "aos/dist/aos.css";
+
+import artDirection from "../../public/project-images/art-direction.png";
+import blackformHero from "../../public/project-images/blackform-hero.png";
+import creativeDirection from "../../public/project-images/creative-direction.png";
+import emailmarketinghub from "../../public/project-images/emailmarketinghub.webp";
+import feectory from "../../public/project-images/feectory.png";
+import graphicPoster from "../../public/project-images/graphic-poster.png";
+import idLamp from "../../public/project-images/id-lamp.png";
+import ignityLabs from "../../public/project-images/ignity-labs.png";
+import illustrationAirpods from "../../public/project-images/illustration-airpods.png";
+import launchHero from "../../public/project-images/launch-hero.png";
+import logoNike from "../../public/project-images/logo-nike.png";
+import logo from "../../public/project-images/logo.png";
+import lsmdBranding from "../../public/project-images/lsmd-branding.png";
+import lsmdBranding2 from "../../public/project-images/lsmd-branding-2.png";
+import lsmdBranding3 from "../../public/project-images/lsmd-branding-3.png";
+import lsmdBranding4 from "../../public/project-images/lsmd-branding-4.png";
+import lsmdBranding5 from "../../public/project-images/lsmd-branding-5.png";
+import mobileDevelopment from "../../public/project-images/mobile-development.png";
+import motionHero from "../../public/project-images/motion-hero.png";
+import noteApp from "../../public/project-images/note-app.png";
+import portfolio from "../../public/project-images/portfolio.png";
+import productPhone from "../../public/project-images/product-phone.png";
+import pulseAiBranding from "../../public/project-images/pulse-ai-branding.png";
+import pulseAiBranding2 from "../../public/project-images/pulse-ai-branding-2.png";
+import pulseAiLogoBreakdown from "../../public/project-images/pulse-ai-logo-breakdown.png";
+import strategy from "../../public/project-images/strategy.png";
+import titan from "../../public/project-images/titan.png";
+import uiUxHero from "../../public/project-images/ui-ux-hero.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   let container = useRef(null);
+  let tlx;
+  let tly;
+  let maxDistanceX;
+  let maxDistanceY;
 
-  const [expertiseImage, setExpertiseImage] = useState(
-    "/project-images/art-direction.png"
-  );
+  const [expertiseImage, setExpertiseImage] = useState(pulseAiBranding2);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 1000;
 
   // Add this function at the top of your file or in a separate utility file
   function scrambleText(element, textContent, duration = 500) {
     const originalText = textContent;
-    const reverseInterval = 100; // Interval between each character change
-    let elapsed = 0;
-    let reversed = false;
+    const intervalTime = 100; // Time between each character change
+    const totalSteps = Math.ceil(duration / intervalTime); // Total steps for the animation
+    let currentStep = 0;
 
-    const interval = setInterval(() => {
-      const progress = Math.min(elapsed / duration, 1); // Ensure progress doesn't exceed 1
-      const currentLength = Math.ceil(progress * originalText.length);
+    const scrambleInterval = setInterval(() => {
+      const progress = currentStep / totalSteps;
 
-      if (progress >= 1 && reversed) {
-        clearInterval(interval);
-        element.textContent = originalText; // Restore original text
-      } else if (!reversed) {
-        // Reverse the text one character at a time
-        const reversedPart = originalText
-          .split("")
-          .slice(0, currentLength)
-          .reverse()
-          .join("");
-        const remainingPart = originalText.slice(currentLength);
-        element.textContent = reversedPart + remainingPart;
-
-        if (currentLength >= originalText.length) reversed = true;
-      } else {
-        // Restore the text one character at a time
-        const restoredPart = originalText.slice(0, currentLength);
-        const reversedPart = originalText
-          .split("")
-          .slice(currentLength)
-          .reverse()
-          .join("");
-        element.textContent = restoredPart + reversedPart;
+      if (progress >= 1) {
+        clearInterval(scrambleInterval);
+        element.textContent = originalText; // Restore the original text at the end
+        return;
       }
 
-      elapsed += reverseInterval;
-    }, reverseInterval);
+      const scrambledText = originalText
+        .split("")
+        .map((char, index) => {
+          if (index < Math.floor(progress * originalText.length)) {
+            return originalText[index]; // Restore characters progressively
+          }
+          return String.fromCharCode(33 + Math.random() * 94); // Random ASCII characters
+        })
+        .join("");
+
+      element.textContent = scrambledText;
+      currentStep++;
+    }, intervalTime);
   }
 
   // Attach the effect to all links, h2, and h1 tags
@@ -91,22 +127,52 @@ export default function Home() {
       });
     }
 
+    maxDistanceX = innerWidth / 10;
+    maxDistanceY = innerHeight / 10;
+    let tlx;
+    let tly;
+    let updateX;
+    let updateY;
+
+    if (!isMobile) {
+      tlx = gsap
+        .timeline({ paused: true, ease: "power1.out" })
+        .from(".test", { x: `-=${maxDistanceX} / 2`, ease: "none" })
+        .to(".test", { x: `+=${maxDistanceX} / 2`, ease: "none" });
+
+      tly = gsap
+        .timeline({ paused: true, ease: "power1.out" })
+        .from(".test", { y: `-=${maxDistanceY} / 2`, ease: "none" })
+        .to(".test", { y: `+=${maxDistanceY} / 2`, ease: "none" });
+
+      // Use gsap.quickTo for smoother updates
+      updateX = gsap.quickTo(tlx, "progress", { ease: "power4.out" });
+      updateY = gsap.quickTo(tly, "progress", { ease: "power4.out" });
+    }
     window.onmousemove = function (e) {
-      console.log("hi :)");
-      var mouseX = e.clientX;
-      var mouseY = e.clientY;
+      if (!isMobile) {
+        const distanceX = e.pageX / 10;
+        const distanceY = e.pageY / 10;
 
-      if (!initCursor) {
-        // cursor.style.opacity = 1;
-        gsap.to(cursor, { duration: 0.3, opacity: 1 });
-        initCursor = true;
+        // Smoothly update the timeline progress
+        updateX(distanceX / maxDistanceX);
+        updateY(distanceY / maxDistanceY);
+
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        if (!initCursor) {
+          // cursor.style.opacity = 1;
+          gsap.to(cursor, { duration: 0.3, opacity: 1 });
+          initCursor = true;
+        }
+
+        gsap.to(cursor, {
+          duration: 0.3,
+          top: mouseY + "px",
+          left: mouseX + "px",
+        });
       }
-
-      gsap.to(cursor, {
-        duration: 0.3,
-        top: mouseY + "px",
-        left: mouseX + "px",
-      });
     };
 
     window.onmouseout = function (e) {
@@ -120,7 +186,7 @@ export default function Home() {
     const rows = document.querySelectorAll(".image-row");
 
     rows.forEach((row, index) => {
-      const direction = index % 2 === 0 ? "+=100" : "-=100"; // Alternate directions
+      const direction = index % 2 === 0 ? "+=200" : "-=200"; // Alternate directions
 
       gsap.to(row, {
         x: direction,
@@ -137,7 +203,7 @@ export default function Home() {
   return (
     <div ref={(el) => (container = el)} style={{ overflowX: "hidden" }}>
       <nav
-        className="fixed top-0 left-0 right-0 flex sm:flex-row flex-col gap-5 items-center justify-between p-5 sm:px-[200px] bg-white px-[20px]"
+        className="fixed top-0 left-0 right-0 flex sm:flex-row flex-col gap-5 items-center justify-between p-5 sm:px-[200px] bg-white px-[20px] border-b-[1px] border-black/10"
         data-aos="fade"
         data-aos-duration="2000"
         style={{ zIndex: 100 }}
@@ -192,7 +258,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="flex flex-col sm:h-lvh h-max justify-between">
+      <div className="flex flex-col sm:h-lvh h-[100vh] justify-between">
         <div className="flex justify-between w-full sm:px-[200px] px-[20px] pt-30">
           <div className="hidden sm:flex flex-col justify-end">
             <h2 className="blur-xl-hover">industrial design</h2>
@@ -204,6 +270,7 @@ export default function Home() {
             viewBox="0 0 618 550"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="test sm:m-0 mt-10 mx-auto"
           >
             <g opacity="0.05">
               <path
@@ -228,7 +295,7 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="flex flex-col justify-end sm:h-lvh sm:mt-0 mt-[220px]">
+        <div className="flex flex-col justify-end sm:h-lvh">
           <svg
             width="100%"
             viewBox="0 0 1440 278"
@@ -293,14 +360,19 @@ export default function Home() {
           </div>
           <Image
             src={expertiseImage}
+            width="0"
+            height="0"
+            sizes="100%"
             style={{
               background: "lightgray",
               objectFit: "cover",
               width: "100%",
               height: "300px",
+              borderRadius: "10px",
+              border: "1px solid #ddd",
             }}
             placeholder="blur"
-          ></Image>
+          />
         </div>
         <div className="w-full flex flex-col justify-between items-end">
           <h3>design</h3>
@@ -343,14 +415,16 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-5">
-          <div>
+          <div className="hover:-translate-y-2 transition">
             <Image
-              src="/project-images/portfolio.png"
+              src={portfolio}
               style={{
                 background: "lightgray",
                 objectFit: "cover",
                 width: "100%",
                 marginBottom: "10px",
+                borderRadius: "10px",
+                border: "1px solid #ddd",
               }}
               data-aos="fade"
               data-aos-duration="1500"
@@ -369,14 +443,16 @@ export default function Home() {
           </div>
 
           <div className="flex gap-5 sm:flex-row flex-col">
-            <div className="w-full">
+            <div className="w-full hover:-translate-y-2 transition">
               <Image
-                src="/project-images/ignity-labs.avif"
+                src={ignityLabs}
                 style={{
                   background: "lightgray",
                   objectFit: "cover",
                   width: "100%",
                   marginBottom: "10px",
+                  borderRadius: "10px",
+                  border: "1px solid #ddd",
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
@@ -391,14 +467,16 @@ export default function Home() {
                 <span className="sm:block hidden">web design</span>
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-full hover:-translate-y-2 transition">
               <Image
-                src="/project-images/feectory.avif"
+                src={feectory}
                 style={{
                   background: "lightgray",
                   objectFit: "cover",
                   width: "100%",
                   marginBottom: "10px",
+                  borderRadius: "10px",
+                  border: "1px solid #ddd",
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
@@ -417,14 +495,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full">
+          <div className="w-full hover:-translate-y-2 transition">
             <Image
-              src="/project-images/emailmarketinghub.webp"
+              src={emailmarketinghub}
               style={{
                 background: "lightgray",
                 objectFit: "cover",
                 width: "100%",
                 marginBottom: "10px",
+                borderRadius: "10px",
+                border: "1px solid #ddd",
               }}
               data-aos="fade"
               data-aos-duration="1500"
@@ -450,145 +530,37 @@ export default function Home() {
         data-aos-duration="1500"
       >
         <div className="image-row row-1">
-          <Image
-            src="/project-images/portfolio.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/lsmd-branding-3.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/creative-direction.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/emailmarketinghub.webp"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/feectory.avif"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/graphic-poster.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/lsmd-branding-2.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/ignity-labs.avif"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/illustration-airpods.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
+          <Image src={portfolio} alt="Image 1" placeholder="blur" />
+          <Image src={creativeDirection} alt="Image 3" placeholder="blur" />
+          <Image src={lsmdBranding2} alt="Image 2" placeholder="blur" />
+          <Image src={emailmarketinghub} alt="Image 1" placeholder="blur" />
+          <Image src={lsmdBranding5} alt="Image 1" placeholder="blur" />
+          <Image src={feectory} alt="Image 2" placeholder="blur" />
+          <Image src={graphicPoster} alt="Image 3" placeholder="blur" />
+          <Image src={ignityLabs} alt="Image 2" placeholder="blur" />
+          <Image src={illustrationAirpods} alt="Image 3" placeholder="blur" />
         </div>
         <div className="image-row row-2">
-          <Image
-            src="/project-images/logo-nike.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/lsmd-branding-4.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/motion-hero.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/product-phone.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/strategy.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/ui-ux-hero.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/blackform-hero.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/pulse-ai-branding-2.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/logo.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
+          <Image src={logoNike} alt="Image 1" placeholder="blur" />
+          <Image src={lsmdBranding4} alt="Image 2" placeholder="blur" />
+          <Image src={motionHero} alt="Image 3" placeholder="blur" />
+          <Image src={productPhone} alt="Image 1" placeholder="blur" />
+          <Image src={strategy} alt="Image 2" placeholder="blur" />
+          <Image src={uiUxHero} alt="Image 3" placeholder="blur" />
+          <Image src={blackformHero} alt="Image 1" placeholder="blur" />
+          <Image src={pulseAiBranding} alt="Image 2" placeholder="blur" />
+          <Image src={logo} alt="Image 3" placeholder="blur" />
         </div>
         <div className="image-row row-3">
-          <Image
-            src="/project-images/lsmd-branding.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/id-lamp.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/art-direction.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/mobile-development.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/note-app.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/pulse-ai-branding.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/lsmd-branding-5.png"
-            alt="Image 1"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/launch-hero.png"
-            alt="Image 2"
-            placeholder="blur"
-          />
-          <Image
-            src="/project-images/titan.png"
-            alt="Image 3"
-            placeholder="blur"
-          />
+          <Image src={lsmdBranding} alt="Image 1" placeholder="blur" />
+          <Image src={idLamp} alt="Image 2" placeholder="blur" />
+          <Image src={pulseAiBranding2} alt="Image 3" placeholder="blur" />
+          <Image src={artDirection} alt="Image 3" placeholder="blur" />
+          <Image src={mobileDevelopment} alt="Image 1" placeholder="blur" />
+          <Image src={noteApp} alt="Image 2" placeholder="blur" />
+          <Image src={lsmdBranding5} alt="Image 1" placeholder="blur" />
+          <Image src={launchHero} alt="Image 2" placeholder="blur" />
+          <Image src={titan} alt="Image 3" placeholder="blur" />
         </div>
       </div>
 
@@ -603,10 +575,13 @@ export default function Home() {
         <br />
         <br />
 
-        <p className="text-3xl">
-          I approach all things design with a distinct blend of play and
-          minimalism, seamlessly navigating design challenges and delivering
-          functional + delightful solutions.
+        <p className="sm:text-3xl text-xl">
+          I blend hands-on craftsmanship with strategic thinking across
+          industrial, graphic, and web design. Drawing from experience building
+          startups and collaborating with multiple brands, I bring
+          first-principles thinking to every project. My approach balances
+          visual impact with practical functionality, creating intuitive
+          solutions that connect with users and drive results.
         </p>
       </div>
 
@@ -621,15 +596,16 @@ export default function Home() {
       </div>
       <div className="scrolls mb-40 sm:pl-[170px] pl-[0px]">
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
-          <div class="flex justify-between flex-col h-full">
+          <div className="flex justify-between flex-col h-full">
             <div>
               <Image
                 src="/testimonials/tom.avif"
-                className="w-[60px] rounded-full"
-                placeholder="blur"
+                width={60}
+                height={60}
+                className="rounded-full"
               ></Image>
               <br />
-              <p style={{ textWrap: "wrap" }}>
+              <p style={{ textWrap: "wrap" }} className="sm:text-2xl">
                 Luke did a phenomenal job with our logo project. He took the
                 time to understand the brand, the product and went deeper asking
                 questions about our offering. He worked with us diligently,
@@ -648,15 +624,16 @@ export default function Home() {
           </div>
         </div>
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
-          <div class="flex justify-between flex-col h-full">
+          <div className="flex justify-between flex-col h-full">
             <div>
               <Image
                 src="/testimonials/cesar.avif"
-                className="w-[60px] rounded-full"
-                placeholder="blur"
+                width={60}
+                height={60}
+                className="rounded-full"
               ></Image>
               <br />
-              <p style={{ textWrap: "wrap" }}>
+              <p style={{ textWrap: "wrap" }} className="sm:text-2xl">
                 Luke did an amazing job creating a logo for my SaaS! He provided
                 multiple high-quality options, was super fast and communicative
                 throughout the process, and even went the extra mile by showing
@@ -673,15 +650,16 @@ export default function Home() {
           </div>
         </div>
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
-          <div class="flex justify-between flex-col h-full">
+          <div className="flex justify-between flex-col h-full">
             <div>
               <Image
                 src="/testimonials/tadeas.avif"
-                className="w-[60px] rounded-full"
-                placeholder="blur"
+                width={60}
+                height={60}
+                className="rounded-full"
               ></Image>
               <br />
-              <p style={{ textWrap: "wrap" }}>
+              <p style={{ textWrap: "wrap" }} className="sm:text-2xl">
                 Luke Smith is an incredible designer with a sharp eye for detail
                 and creativity. He takes ideas and turns them into something
                 visually stunning. Every project we've worked on has been

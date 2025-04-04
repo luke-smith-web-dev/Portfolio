@@ -64,11 +64,12 @@ h3 {
 .scrolls {
   overflow-x: scroll;
   white-space: nowrap;
+  height: max-content;
 }
 
 .scrolls-div {
   margin: 2px;
-  height: 50vh;
+  height: 70vh;
   display: inline-block;
   vertical-align: top;
   margin: 0 30px;
@@ -78,6 +79,7 @@ a {
   opacity: 0.5;
   text-decoration: underline;
   text-underline-offset: 4px;
+  font-family: monospace;
 }
 
 .black-link {
@@ -131,4 +133,17 @@ a {
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #ddd;
+}
+
+.test {
+  z-index: -10;
+}
+
+@media (min-width: 1000px) {
+  .test {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(2);
+  }
 }
