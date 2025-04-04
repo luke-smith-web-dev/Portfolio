@@ -92,9 +92,9 @@ export default function Home() {
     }, intervalTime);
   }
 
-  // Attach the effect to all links, h2, and h1 tags
+  // Attach the effect to all links, except those with the class "ignore-shuffle"
   useEffect(() => {
-    const elements = document.querySelectorAll("a:not(.logo)");
+    const elements = document.querySelectorAll("a:not(.ignore-shuffle)");
     elements.forEach((element) => {
       let originalText = element.textContent;
       element.addEventListener("mouseenter", () =>
@@ -207,7 +207,7 @@ export default function Home() {
         data-aos-duration="2000"
         style={{ zIndex: 100 }}
       >
-        <a href="#top" className="black-link logo">
+        <a href="#top" className="ignore-shuffle">
           <svg
             width="100"
             height="auto"
@@ -253,7 +253,8 @@ export default function Home() {
         <div className="flex gap-10">
           <a href="#proj">projects</a>
           <a href="#about">about</a>
-          <a href="#connect">contact</a>
+          <span className="opacity-20">•</span>
+          <a href="mailto:2lukesmith@gmail.com">email</a>
         </div>
       </nav>
 
@@ -414,31 +415,53 @@ export default function Home() {
         <br />
 
         <div className="flex flex-col gap-5">
-          <div className="hover:-translate-y-2 transition">
-            <Image
-              src={portfolio}
-              style={{
-                background: "lightgray",
-                objectFit: "cover",
-                width: "100%",
-                marginBottom: "10px",
-                borderRadius: "10px",
-                border: "1px solid #ddd",
-              }}
-              data-aos="fade"
-              data-aos-duration="1500"
-              className="sm:h-[620px] h-[250px]"
-              placeholder="blur"
-            ></Image>
-
-            <div className="flex justify-between">
-              <div>
-                <h3>Luke Smith Design • Portfolio '25</h3>
+          <div className="hover:-translate-y-2 transition relative">
+            <a
+              href="https://www.behance.net/gallery/222901625/Luke-Smith-Design-Rebrand"
+              className="ignore-shuffle"
+            >
+              <div className="absolute top-[20px] right-[20px] z-1 bg-gray-200 w-[40px] h-[40px] rounded-md flex items-center justify-center">
+                <svg
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </div>
-              <span className="sm:block hidden">
-                creative direction, web design, web development
-              </span>
-            </div>
+              <Image
+                src={lsmdBranding4}
+                style={{
+                  background: "lightgray",
+                  objectFit: "cover",
+                  width: "100%",
+                  marginBottom: "10px",
+                  borderRadius: "10px",
+                  border: "1px solid #ddd",
+                }}
+                data-aos="fade"
+                data-aos-duration="1500"
+                className="sm:h-[620px] h-[250px]"
+                placeholder="blur"
+              ></Image>
+
+              <div className="flex justify-between">
+                <div>
+                  <h3>Luke Smith Design • Rebrand '25</h3>
+                </div>
+                <span className="sm:block hidden">
+                  creative direction, web design, web development
+                </span>
+              </div>
+            </a>
           </div>
 
           <div className="flex gap-5 sm:flex-row flex-col">
@@ -488,7 +511,7 @@ export default function Home() {
                   <h3>Feectory</h3>
                 </div>
                 <span className="sm:block hidden">
-                  creative direction, logo design, graphic design
+                  logo design, graphic design
                 </span>
               </div>
             </div>

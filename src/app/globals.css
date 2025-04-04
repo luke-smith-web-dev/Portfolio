@@ -82,8 +82,11 @@ a {
   font-family: monospace;
 }
 
-.black-link {
-  opacity: 1 !important;
+a.ignore-shuffle {
+  text-decoration: none;
+  text-underline-offset: 0px;
+  opacity: 1;
+  font-family: inherit;
 }
 
 .container {
