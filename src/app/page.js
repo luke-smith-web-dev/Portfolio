@@ -110,6 +110,17 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    function getDeviceType() {
+      const userAgent = navigator.userAgent;
+      if (/Mobi|Android/i.test(userAgent)) {
+        return "Mobile";
+      } else if (/Tablet|iPad/i.test(userAgent)) {
+        return "Tablet";
+      } else {
+        return "Desktop";
+      }
+    }
+
     AOS.init();
     var cursor = document.querySelector(".custom-cursor");
     var links = document.querySelectorAll("a");
@@ -133,7 +144,7 @@ export default function Home() {
     let updateX;
     let updateY;
 
-    if (!(width <= 1000)) {
+    if (getDeviceType() == "Desktop") {
       tlx = gsap
         .timeline({ paused: true, ease: "power1.out" })
         .from(".test", { x: `-=${maxDistanceX} / 2`, ease: "none" })
@@ -149,7 +160,7 @@ export default function Home() {
       updateY = gsap.quickTo(tly, "progress", { ease: "power4.out" });
     }
     window.onmousemove = function (e) {
-      if (!(width <= 1000)) {
+      if (getDeviceType() == "Desktop") {
         const distanceX = e.pageX / 10;
         const distanceY = e.pageY / 10;
 
@@ -394,9 +405,8 @@ export default function Home() {
           <br />
           <br />
           <br />
-
           <h3>art</h3>
-          <span>stategy</span>
+          <span>strategy</span>
           <span>art direction</span>
           <span>illustration</span>
           <span>creative direction</span>
