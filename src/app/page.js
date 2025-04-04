@@ -760,7 +760,7 @@ export default function Home() {
           <span>socials</span>
           <br />
           <a
-            href="https://www.linkedin.com/in/luke-smith-00b795337/"
+            href="https://www.linkedin.com/in/luke0smith0design/"
             target="_blank"
             rel="noopener noreferrer"
           >
