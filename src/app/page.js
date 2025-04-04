@@ -598,12 +598,12 @@ export default function Home() {
         <br />
 
         <p className="sm:text-3xl text-xl">
-          I blend hands-on craftsmanship with strategic thinking across
-          industrial, graphic, and web design. Drawing from experience building
-          startups and collaborating with multiple brands, I bring
-          first-principles thinking to every project. My approach balances
-          visual impact with practical functionality, creating intuitive
-          solutions that connect with users and drive results.
+          Whether developing new brands, or building upon established ones, I
+          design based on a variety of core principles of strategy by
+          integrating fresh ideas with tried-and-true practices. Whether
+          improving old motifs or creating new designs myself, I draw on a range
+          of inspirations and insights to develop solutions that encourage
+          thoughtful and lasting responses.
         </p>
       </div>
 
