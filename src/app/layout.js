@@ -20,9 +20,6 @@ export const metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    site: "@lukesmithdesign",
-    creator: "@lukesmithdesign",
     images: [
       {
         url: "/images/twitter-image.png",
