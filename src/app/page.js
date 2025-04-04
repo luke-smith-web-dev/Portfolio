@@ -54,13 +54,12 @@ export default function Home() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
+    handleWindowSizeChange();
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
-
-  const isMobile = width <= 1000;
 
   // Add this function at the top of your file or in a separate utility file
   function scrambleText(element, textContent, duration = 500) {
@@ -134,7 +133,7 @@ export default function Home() {
     let updateX;
     let updateY;
 
-    if (!isMobile) {
+    if (!(width <= 1000)) {
       tlx = gsap
         .timeline({ paused: true, ease: "power1.out" })
         .from(".test", { x: `-=${maxDistanceX} / 2`, ease: "none" })
@@ -150,7 +149,7 @@ export default function Home() {
       updateY = gsap.quickTo(tly, "progress", { ease: "power4.out" });
     }
     window.onmousemove = function (e) {
-      if (!isMobile) {
+      if (!(width <= 1000)) {
         const distanceX = e.pageX / 10;
         const distanceY = e.pageY / 10;
 
@@ -180,7 +179,7 @@ export default function Home() {
 
       initCursor = false;
     };
-  }, []);
+  }, [width]);
 
   useEffect(() => {
     const rows = document.querySelectorAll(".image-row");
