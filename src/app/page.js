@@ -299,6 +299,7 @@ export default function Home() {
               width: "100%",
               height: "300px",
             }}
+            placeholder="blur"
           ></Image>
         </div>
         <div className="w-full flex flex-col justify-between items-end">
@@ -354,6 +355,7 @@ export default function Home() {
               data-aos="fade"
               data-aos-duration="1500"
               className="sm:h-[620px] h-[250px]"
+              placeholder="blur"
             ></Image>
 
             <div className="flex justify-between">
@@ -379,6 +381,7 @@ export default function Home() {
                 data-aos="fade"
                 data-aos-duration="1500"
                 className="sm:h-[50vh] h-[250px]"
+                placeholder="blur"
               ></Image>
 
               <div className="flex justify-between">
@@ -400,6 +403,7 @@ export default function Home() {
                 data-aos="fade"
                 data-aos-duration="1500"
                 className="sm:h-[50vh] h-[250px]"
+                placeholder="blur"
               ></Image>
 
               <div className="flex justify-between">
@@ -425,6 +429,7 @@ export default function Home() {
               data-aos="fade"
               data-aos-duration="1500"
               className="sm:h-[650px] h-[250px]"
+              placeholder="blur"
             ></Image>
 
             <div className="flex justify-between">
@@ -445,37 +450,145 @@ export default function Home() {
         data-aos-duration="1500"
       >
         <div className="image-row row-1">
-          <Image src="/project-images/portfolio.png" alt="Image 1" />
-          <Image src="/project-images/lsmd-branding-3.png" alt="Image 2" />
-          <Image src="/project-images/creative-direction.png" alt="Image 3" />
-          <Image src="/project-images/emailmarketinghub.webp" alt="Image 1" />
-          <Image src="/project-images/feectory.avif" alt="Image 2" />
-          <Image src="/project-images/graphic-poster.png" alt="Image 3" />
-          <Image src="/project-images/lsmd-branding-2.png" alt="Image 1" />
-          <Image src="/project-images/ignity-labs.avif" alt="Image 2" />
-          <Image src="/project-images/illustration-airpods.png" alt="Image 3" />
+          <Image
+            src="/project-images/portfolio.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/lsmd-branding-3.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/creative-direction.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/emailmarketinghub.webp"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/feectory.avif"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/graphic-poster.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/lsmd-branding-2.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/ignity-labs.avif"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/illustration-airpods.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
         </div>
         <div className="image-row row-2">
-          <Image src="/project-images/logo-nike.png" alt="Image 1" />
-          <Image src="/project-images/lsmd-branding-4.png" alt="Image 2" />
-          <Image src="/project-images/motion-hero.png" alt="Image 3" />
-          <Image src="/project-images/product-phone.png" alt="Image 1" />
-          <Image src="/project-images/strategy.png" alt="Image 2" />
-          <Image src="/project-images/ui-ux-hero.png" alt="Image 3" />
-          <Image src="/project-images/blackform-hero.png" alt="Image 1" />
-          <Image src="/project-images/pulse-ai-branding-2.png" alt="Image 2" />
-          <Image src="/project-images/logo.png" alt="Image 3" />
+          <Image
+            src="/project-images/logo-nike.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/lsmd-branding-4.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/motion-hero.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/product-phone.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/strategy.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/ui-ux-hero.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/blackform-hero.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/pulse-ai-branding-2.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/logo.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
         </div>
         <div className="image-row row-3">
-          <Image src="/project-images/lsmd-branding.png" alt="Image 1" />
-          <Image src="/project-images/id-lamp.png" alt="Image 2" />
-          <Image src="/project-images/art-direction.png" alt="Image 3" />
-          <Image src="/project-images/mobile-development.png" alt="Image 1" />
-          <Image src="/project-images/note-app.png" alt="Image 2" />
-          <Image src="/project-images/pulse-ai-branding.png" alt="Image 3" />
-          <Image src="/project-images/lsmd-branding-5.png" alt="Image 1" />
-          <Image src="/project-images/launch-hero.png" alt="Image 2" />
-          <Image src="/project-images/titan.png" alt="Image 3" />
+          <Image
+            src="/project-images/lsmd-branding.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/id-lamp.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/art-direction.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/mobile-development.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/note-app.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/pulse-ai-branding.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/lsmd-branding-5.png"
+            alt="Image 1"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/launch-hero.png"
+            alt="Image 2"
+            placeholder="blur"
+          />
+          <Image
+            src="/project-images/titan.png"
+            alt="Image 3"
+            placeholder="blur"
+          />
         </div>
       </div>
 
@@ -511,8 +624,9 @@ export default function Home() {
           <div class="flex justify-between flex-col h-full">
             <div>
               <Image
-                src="https://framerusercontent.com/images/1ZdNG7oT7VBoc2ut3GnetNtvloQ.jpg"
+                src="/testimonials/tom.avif"
                 className="w-[60px] rounded-full"
+                placeholder="blur"
               ></Image>
               <br />
               <p style={{ textWrap: "wrap" }}>
@@ -537,8 +651,9 @@ export default function Home() {
           <div class="flex justify-between flex-col h-full">
             <div>
               <Image
-                src="https://framerusercontent.com/images/1JSgdTAQHLoAMeGInf3Llrgz4Ww.jpg"
+                src="/testimonials/cesar.avif"
                 className="w-[60px] rounded-full"
+                placeholder="blur"
               ></Image>
               <br />
               <p style={{ textWrap: "wrap" }}>
@@ -561,8 +676,9 @@ export default function Home() {
           <div class="flex justify-between flex-col h-full">
             <div>
               <Image
-                src="https://framerusercontent.com/images/CjEDzJM042aradMYa8BjRga4DHU.png"
+                src="/testimonials/tadeas.avif"
                 className="w-[60px] rounded-full"
+                placeholder="blur"
               ></Image>
               <br />
               <p style={{ textWrap: "wrap" }}>
