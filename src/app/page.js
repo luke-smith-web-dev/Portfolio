@@ -608,12 +608,11 @@ export default function Home() {
         <br />
 
         <p className="sm:text-3xl text-xl">
-          Whether developing new concepts, or building upon established
-          approaches, I design based on a variety of core principles of strategy
-          by integrating fresh ideas with tried-and-true practices. Whether
-          improving old motifs or creating new designs myself, I draw on a range
-          of inspirations and insights to develop solutions that encourage
-          thoughtful and lasting responses.
+          Whether developing new concepts or improving old motifs, I design
+          based on a variety of core principles of strategy by integrating fresh
+          ideas with tried-and-true practices. I draw on a range of inspirations
+          and insights to develop solutions that encourage thoughtful and
+          lasting responses.
         </p>
       </div>
 
