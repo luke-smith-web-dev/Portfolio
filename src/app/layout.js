@@ -3,6 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Luke Smith",
   description: "Multidisciplinary Designer based in Missoula, MT",
+  metadataBase: new URL("https://luke-smith.design"),
   ogImage: "/images/og-image.png",
   twitterImage: "/images/twitter-image.png",
   openGraph: {
