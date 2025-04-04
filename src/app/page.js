@@ -48,7 +48,7 @@ export default function Home() {
 
   const [expertiseImage, setExpertiseImage] = useState(pulseAiBranding2);
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(null);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
