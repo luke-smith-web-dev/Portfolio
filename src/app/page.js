@@ -611,8 +611,8 @@ export default function Home() {
           Whether developing new concepts or improving old motifs, I design
           based on a variety of core principles of strategy by integrating fresh
           ideas with tried-and-true practices. I draw on a range of inspirations
-          and insights to develop solutions that encourage thoughtful and
-          lasting responses.
+          and insights working with clients to develop solutions that encourage
+          thoughtful and lasting responses.
         </p>
       </div>
 
@@ -760,6 +760,13 @@ export default function Home() {
           <span>socials</span>
           <br />
           <a
+            href="https://www.linkedin.com/in/luke-smith-00b795337/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
             href="https://x.com/lukesmithdesign"
             target="_blank"
             rel="noopener noreferrer"
@@ -775,13 +782,6 @@ export default function Home() {
             Threads
           </a>
           <br />
-          <a
-            href="https://www.linkedin.com/in/luke-smith-00b795337/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
         </div>
         <div className="sm:mb-0 mb-10">
           <span>contact</span>
