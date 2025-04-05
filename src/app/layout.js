@@ -4,31 +4,6 @@ export const metadata = {
   title: "Luke Smith",
   description: "Multidisciplinary Designer based in Missoula, MT",
   metadataBase: new URL("https://luke-smith.design"),
-  ogImage: "/images/og-image.png",
-  twitterImage: "/images/twitter-image.png",
-  openGraph: {
-    title: "Luke Smith",
-    description: "Multidisciplinary Designer based in Missoula, MT",
-    url: "https://luke-smith.design",
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Luke Smith - Multidisciplinary Designer based in Missoula, MT",
-      },
-    ],
-  },
-  twitter: {
-    images: [
-      {
-        url: "/images/twitter-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Luke Smith - Multidisciplinary Designer based in Missoula, MT",
-      },
-    ],
-  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
