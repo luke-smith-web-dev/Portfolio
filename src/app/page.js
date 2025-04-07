@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
 import Image from "next/image";
 import "aos/dist/aos.css";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 import artDirection from "../../public/project-images/art-direction.png";
 import blackformHero from "../../public/project-images/blackform-hero.png";
@@ -59,6 +60,17 @@ export default function Home() {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
+  }, []);
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        theme: "light",
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
   }, []);
 
   // Add this function at the top of your file or in a separate utility file
