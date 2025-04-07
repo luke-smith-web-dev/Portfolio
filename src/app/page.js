@@ -721,6 +721,7 @@ export default function Home() {
         <div className="flex justify-between w-full sm:px-[200px] px-[50px] sm:flex-row flex-col">
           <div className="flex flex-col sm:mb-0 mb-10">
             <span>contact</span>
+            <br />
             <a
               href="https://cal.com/lukesmithdesign/15min"
               target="_blank"
@@ -728,6 +729,7 @@ export default function Home() {
             >
               book a call
             </a>
+            <br />
             <a
               href="mailto:2lukesmith@gmail.com"
               target="_blank"
