@@ -795,7 +795,6 @@ export default function Home() {
         <div className="sm:mb-0 mb-10">
           <span>contact</span>
           <br />
-
           <a
             href="https://cal.com/lukesmithdesign/15min"
             target="_blank"
@@ -803,7 +802,7 @@ export default function Home() {
           >
             book a call
           </a>
-
+          <br />
           <a
             href="mailto:2lukesmith@gmail.com"
             target="_blank"
