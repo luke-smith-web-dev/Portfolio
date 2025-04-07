@@ -265,7 +265,13 @@ export default function Home() {
           <a href="#proj">projects</a>
           <a href="#about">about</a>
           <span className="opacity-20">•</span>
-          <a href="mailto:2lukesmith@gmail.com">email</a>
+          <a
+            href="https://cal.com/lukesmithdesign/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Call
+          </a>
         </div>
       </nav>
 
@@ -721,6 +727,13 @@ export default function Home() {
           <div className="flex flex-col sm:mb-0 mb-10">
             <span>contact</span>
             <a
+              href="https://cal.com/lukesmithdesign/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a Call
+            </a>
+            <a
               href="mailto:2lukesmith@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -786,6 +799,14 @@ export default function Home() {
         <div className="sm:mb-0 mb-10">
           <span>contact</span>
           <br />
+
+          <a
+            href="https://cal.com/lukesmithdesign/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Call
+          </a>
 
           <a
             href="mailto:2lukesmith@gmail.com"
