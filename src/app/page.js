@@ -270,7 +270,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book a Call
+            book a call
           </a>
         </div>
       </nav>
@@ -372,7 +372,6 @@ export default function Home() {
       >
         <div className="w-full flex flex-col justify-between mb-10">
           <div className="mb-10">
-            <span className="opacity-50 text-sm">what i do</span>
             <HTwoAnimateIn>expertise</HTwoAnimateIn>
           </div>
           <Image
@@ -425,7 +424,6 @@ export default function Home() {
         data-aos-duration="1500"
         id="proj"
       >
-        <span className="opacity-50 text-sm">what i've done</span>
         <HTwoAnimateIn>work</HTwoAnimateIn>
         <br />
         <br />
@@ -608,7 +606,6 @@ export default function Home() {
         data-aos-duration="1500"
         id="about"
       >
-        <span className="opacity-50 text-sm">who i am</span>
         <HTwoAnimateIn>about me</HTwoAnimateIn>
         <br />
         <br />
@@ -628,7 +625,6 @@ export default function Home() {
         data-aos-duration="1500"
         id="testimonials"
       >
-        <span className="opacity-50 text-sm">what they say</span>
         <HTwoAnimateIn>testimonials</HTwoAnimateIn>
       </div>
       <div className="scrolls mb-40 sm:pl-[170px] pl-[0px]">
@@ -717,7 +713,6 @@ export default function Home() {
         data-aos-duration="1500"
         id="connect"
       >
-        <span className="opacity-50 text-sm">let's connect</span>
         <HTwoAnimateIn>get in touch</HTwoAnimateIn>
 
         <br />
@@ -731,7 +726,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a Call
+              book a call
             </a>
             <a
               href="mailto:2lukesmith@gmail.com"
@@ -806,7 +801,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book a Call
+            book a call
           </a>
 
           <a
