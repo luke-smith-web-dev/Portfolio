@@ -779,6 +779,7 @@ export default function Home() {
           >
             LinkedIn
           </a>
+          <br />
           <a
             href="https://x.com/lukesmithdesign"
             target="_blank"
