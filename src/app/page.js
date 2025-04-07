@@ -46,7 +46,7 @@ export default function Home() {
   let maxDistanceX;
   let maxDistanceY;
 
-  const [expertiseImage, setExpertiseImage] = useState(pulseAiBranding2);
+  const [expertiseImage, setExpertiseImage] = useState(illustrationAirpods);
 
   const [width, setWidth] = useState(null);
 
@@ -372,7 +372,7 @@ export default function Home() {
       >
         <div className="w-full flex flex-col justify-between mb-10">
           <div className="mb-10">
-            <HTwoAnimateIn>expertise</HTwoAnimateIn>
+            <HTwoAnimateIn>skills</HTwoAnimateIn>
           </div>
           <Image
             src={expertiseImage}
