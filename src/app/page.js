@@ -448,6 +448,8 @@ export default function Home() {
             <a
               href="https://www.behance.net/gallery/222901625/Luke-Smith-Design-Rebrand"
               className="ignore-shuffle"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="absolute top-[20px] right-[20px] z-1 bg-gray-200 w-[40px] h-[40px] rounded-md flex items-center justify-center">
                 <svg
@@ -496,7 +498,7 @@ export default function Home() {
           <div className="flex gap-5 sm:flex-row flex-col">
             <div className="w-full hover:-translate-y-2 transition">
               <Image
-                src={ignityLabs}
+                src={emailmarketinghub}
                 style={{
                   background: "lightgray",
                   objectFit: "cover",
@@ -513,9 +515,11 @@ export default function Home() {
 
               <div className="flex justify-between">
                 <div>
-                  <h3>Ignty Labs</h3>
+                  <h3>Email Marketing Hub</h3>
                 </div>
-                <span className="sm:block hidden">web design</span>
+                <span className="sm:block hidden">
+                  creative direction, web design
+                </span>
               </div>
             </div>
             <div className="w-full hover:-translate-y-2 transition">
@@ -546,31 +550,55 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full hover:-translate-y-2 transition">
-            <Image
-              src={emailmarketinghub}
-              style={{
-                background: "lightgray",
-                objectFit: "cover",
-                width: "100%",
-                marginBottom: "10px",
-                borderRadius: "10px",
-                border: "1px solid #ddd",
-              }}
-              data-aos="fade"
-              data-aos-duration="1500"
-              className="sm:h-[650px] h-[250px]"
-              placeholder="blur"
-            ></Image>
-
-            <div className="flex justify-between">
-              <div>
-                <h3>The Email Marketing Hub</h3>
+          <div className="w-full hover:-translate-y-2 transition relative">
+            <a
+              href="https://www.behance.net/gallery/223325181/Pulse-AI-Creative-Branding"
+              className="ignore-shuffle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="absolute top-[20px] right-[20px] z-1 bg-gray-200 w-[40px] h-[40px] rounded-md flex items-center justify-center">
+                <svg
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
               </div>
-              <span className="sm:block hidden">
-                creative direction, web design
-              </span>
-            </div>
+              <Image
+                src={pulseAiBranding2}
+                style={{
+                  background: "lightgray",
+                  objectFit: "cover",
+                  width: "100%",
+                  marginBottom: "10px",
+                  borderRadius: "10px",
+                  border: "1px solid #ddd",
+                }}
+                data-aos="fade"
+                data-aos-duration="1500"
+                className="sm:h-[650px] h-[250px]"
+                placeholder="blur"
+              ></Image>
+
+              <div className="flex justify-between">
+                <div>
+                  <h3>Pulse AI Creative</h3>
+                </div>
+                <span className="sm:block hidden">
+                  branding, creative direction, web design
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
