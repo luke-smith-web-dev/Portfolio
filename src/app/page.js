@@ -284,6 +284,9 @@ export default function Home() {
           >
             book a call
           </a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            resume
+          </a>
         </div>
       </nav>
 
@@ -750,6 +753,15 @@ export default function Home() {
               2lukesmith@gmail.com
             </a>
           </div>
+
+          <div className="flex flex-col sm:mb-0 mb-10">
+            <span>resume</span>
+            <br />
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              pdf resume
+            </a>
+          </div>
+
           <div className="max-w-[300px] flex flex-col text-right">
             <span>
               Available for freelance projects, short-term contracts, and full
@@ -777,6 +789,10 @@ export default function Home() {
           <a href="#testimonials">testimonials</a>
           <br />
           <a href="#connect">contact</a>
+          <br />
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            resume
+          </a>
         </div>
         <div className="sm:mb-0 mb-10">
           <span>socials</span>
