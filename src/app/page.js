@@ -121,18 +121,18 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    function getDeviceType() {
-      const userAgent = navigator.userAgent;
-      if (/Mobi|Android/i.test(userAgent)) {
-        return "Mobile";
-      } else if (/Tablet|iPad/i.test(userAgent)) {
-        return "Tablet";
-      } else {
-        return "Desktop";
-      }
+  function getDeviceType() {
+    const userAgent = navigator.userAgent;
+    if (/Mobi|Android/i.test(userAgent)) {
+      return "Mobile";
+    } else if (/Tablet|iPad/i.test(userAgent)) {
+      return "Tablet";
+    } else {
+      return "Desktop";
     }
+  }
 
+  useEffect(() => {
     AOS.init();
     var cursor = document.querySelector(".custom-cursor");
     var links = document.querySelectorAll("a");
@@ -290,7 +290,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="flex flex-col sm:h-lvh h-[100vh] justify-between">
+      <div className="flex flex-col sm:h-[100vh] h-[80vh] justify-center">
         <div className="flex justify-between w-full sm:px-[200px] px-[20px] pt-30">
           <div className="hidden sm:flex flex-col justify-end">
             <h2 className="blur-xl-hover">industrial design</h2>
@@ -368,68 +368,17 @@ export default function Home() {
               fill="black"
             />
           </svg>
-          <div className="flex justify-between items-end sm:flex-row flex-col">
+          <div className="flex justify-between sm:flex-row flex-col">
             <div className="sm:pl-[50px] pl-0">
               <h2 className="sm:block hidden blur-hover">
                 Based in Missoula, MT
               </h2>
             </div>
-            <h1 className="sm:mt-0 mt-5">Multidisciplinary Designer</h1>
+            <div className="flex items-end flex-col sm:pr-[10px] pr-0">
+              <h1 className="sm:mt-0 mt-5">Multidisciplinary Designer</h1>
+            </div>
           </div>
           <br />
-        </div>
-      </div>
-
-      <div
-        className="sm:px-[200px] px-[50px] py-40 flex justify-between flex-col sm:flex-row"
-        data-aos="fade"
-        data-aos-duration="1500"
-      >
-        <div className="w-full flex flex-col justify-between mb-10">
-          <div className="mb-10">
-            <HTwoAnimateIn>skills</HTwoAnimateIn>
-          </div>
-          <Image
-            src={expertiseImage}
-            width="0"
-            height="0"
-            sizes="100%"
-            style={{
-              background: "lightgray",
-              objectFit: "cover",
-              width: "100%",
-              height: "300px",
-              borderRadius: "10px",
-              border: "1px solid #ddd",
-            }}
-            placeholder="blur"
-          />
-        </div>
-        <div className="w-full flex flex-col justify-between items-end">
-          <h3>design</h3>
-          <span>industrial design</span>
-          <span>ui/ux design</span>
-          <span>product design</span>
-          <span>graphic design</span>
-          <span>motion design</span>
-          <span>logo design</span>
-
-          <br />
-          <br />
-          <br />
-
-          <h3>technology</h3>
-          <span>web development</span>
-          <span>mobile development</span>
-
-          <br />
-          <br />
-          <br />
-          <h3>art</h3>
-          <span>strategy</span>
-          <span>art direction</span>
-          <span>illustration</span>
-          <span>creative direction</span>
         </div>
       </div>
 
@@ -486,9 +435,11 @@ export default function Home() {
 
               <div className="flex justify-between">
                 <div>
-                  <h3>Luke Smith Design • Rebrand '25</h3>
+                  <h3>Luke Smith Design Rebrand</h3>
                 </div>
-                <span className="sm:block hidden">
+                <span
+                  className={getDeviceType() === "Mobile" ? "hidden" : "block"}
+                >
                   creative direction, web design, web development
                 </span>
               </div>
@@ -517,7 +468,9 @@ export default function Home() {
                 <div>
                   <h3>Email Marketing Hub</h3>
                 </div>
-                <span className="sm:block hidden">
+                <span
+                  className={getDeviceType() === "Mobile" ? "hidden" : "block"}
+                >
                   creative direction, web design
                 </span>
               </div>
@@ -543,7 +496,9 @@ export default function Home() {
                 <div>
                   <h3>Feectory</h3>
                 </div>
-                <span className="sm:block hidden">
+                <span
+                  className={getDeviceType() === "Mobile" ? "hidden" : "block"}
+                >
                   logo design, graphic design
                 </span>
               </div>
@@ -594,7 +549,9 @@ export default function Home() {
                 <div>
                   <h3>Pulse AI Creative</h3>
                 </div>
-                <span className="sm:block hidden">
+                <span
+                  className={getDeviceType() === "Mobile" ? "hidden" : "block"}
+                >
                   branding, creative direction, web design
                 </span>
               </div>

@@ -24,9 +24,9 @@ body {
 }
 
 h1 {
-  @apply text-5xl font-bold;
+  @apply text-5xl font-medium;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  font-weight: 600;
+  font-weight: 6s00;
   letter-spacing: -0.09em;
 }
 
