@@ -278,7 +278,7 @@ export default function Home() {
           <a href="#about">about</a>
           <span className="opacity-20">•</span>
           <a
-            href="https://cal.com/lukesmithdesign/15min"
+            href="https://cal.com/blacktaildesign/15min"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -723,7 +723,7 @@ export default function Home() {
             <span>contact</span>
             <br />
             <a
-              href="https://cal.com/lukesmithdesign/15min"
+              href="https://cal.com/blacktaildesign/15min"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -811,7 +811,7 @@ export default function Home() {
           <span>contact</span>
           <br />
           <a
-            href="https://cal.com/lukesmithdesign/15min"
+            href="https://cal.com/blacktaildesign/15min"
             target="_blank"
             rel="noopener noreferrer"
           >
