@@ -69,7 +69,8 @@ h3 {
 
 .scrolls-div {
   margin: 2px;
-  height: 70vh;
+  max-height: 70vh;
+  height: 100%;
   display: inline-block;
   vertical-align: top;
   margin: 0 30px;
