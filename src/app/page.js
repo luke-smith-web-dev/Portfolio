@@ -121,18 +121,19 @@ export default function Home() {
     };
   }, []);
 
-  function getDeviceType() {
-    const userAgent = navigator.userAgent;
-    if (/Mobi|Android/i.test(userAgent)) {
-      return "Mobile";
-    } else if (/Tablet|iPad/i.test(userAgent)) {
-      return "Tablet";
-    } else {
-      return "Desktop";
-    }
-  }
+  const getDeviceType = () => {};
 
   useEffect(() => {
+    getDeviceType = () => {
+      const userAgent = navigator.userAgent;
+      if (/Mobi|Android/i.test(userAgent)) {
+        return "Mobile";
+      } else if (/Tablet|iPad/i.test(userAgent)) {
+        return "Tablet";
+      } else {
+        return "Desktop";
+      }
+    };
     AOS.init();
     var cursor = document.querySelector(".custom-cursor");
     var links = document.querySelectorAll("a");
