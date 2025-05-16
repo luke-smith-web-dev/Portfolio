@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.08em;
+  margin: 0;
+  width: 100vw;
+}
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px #808080 solid;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1000;
+}
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+h1 {
+  @apply text-5xl font-medium;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 6s00;
+  letter-spacing: -0.09em;
+}
+
+h2 {
+  @apply text-5xl font-bold;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.09em;
+  font-weight: 500;
+}
+
+h3 {
+  @apply text-xl font-bold;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blur,
+.blur-hover {
+  @apply blur-[3px];
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.blur-xl-hover {
+  @apply blur-[5px];
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.blur-hover:hover,
+.blur-xl-hover:hover {
+  @apply blur-none;
+  opacity: 1;
+}
+
+.scrolls {
+  overflow-x: scroll;
+  white-space: nowrap;
+  height: max-content;
+}
+
+.scrolls-div {
+  margin: 2px;
+  max-height: 70vh;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 30px;
+}
+
+a {
+  opacity: 0.5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-family: monospace;
+}
+
+a.ignore-shuffle {
+  text-decoration: none;
+  text-underline-offset: 0px;
+  opacity: 1;
+  font-family: inherit;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+  visibility: hidden;
+}
+
+.split-word {
+  will-change: transform, opacity;
+}
+
+.op-class {
+  opacity: 0;
+}
+
+.fadeInSlow {
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
+.scrolling-images-section {
+  overflow: hidden; /* Hide the edges of the images */
+  padding: 50px 0;
+  position: relative;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.image-row img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.test {
+  z-index: -10;
+}
+
+@media (min-width: 1000px) {
+  .test {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(2);
+  }
+}
