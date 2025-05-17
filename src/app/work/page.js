@@ -2,7 +2,7 @@
 
 export default function Work() {
   return (
-    <div className="mx-5 sm:mx-[30rem] mt-20">
+    <div className="mx-5 xl:mx-[30rem] mt-20">
       <div>
         <div className="flex justify-between mt-10">
           <h3 className="font-[600] text-2xl">Pulse AI Creative</h3>

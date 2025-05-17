@@ -73,10 +73,10 @@ export default function Services() {
           </button>
         </div>
       </div>
-      <div className="mx-5 sm:mx-[30rem]">
-        <div className="bg-gray-100 border-gray-200 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between sm:flex-row flex-col">
+      <div className="mx-5 xl:mx-[30rem]">
+        <div className="bg-gray-100 border-gray-200 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between xl:flex-row flex-col">
           <h3 className="font-[600] text-xl mb-2">Web Design</h3>
-          <div className="sm:w-[50%]">
+          <div className="xl:w-[50%]">
             <p className="font-[500] opacity-50 mb-5">
               I provide web design services for startups and brands. I can
               create landing pages, e-commerce sites, and other web
@@ -143,12 +143,12 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="bg-blue-100 border-gray-100 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between sm:flex-row flex-col">
+        <div className="bg-blue-100 border-gray-100 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between xl:flex-row flex-col">
           <div>
             <h3 className="font-[600] text-xl mb-2">Product Design</h3>
             <p className="opacity-50 font-[500] italic">(UI/UX)</p>
           </div>
-          <div className="sm:w-[50%]">
+          <div className="xl:w-[50%]">
             <p className="font-[500] opacity-50 mb-5">
               I offer product design services for web and mobile applications.
               This includes user research, wireframing, prototyping, and other
@@ -215,11 +215,11 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="bg-white border-gray-200 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between sm:flex-row flex-col">
+        <div className="bg-white border-gray-200 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between xl:flex-row flex-col">
           <div>
             <h3 className="font-[600] text-xl mb-2">Industrial Design</h3>
           </div>
-          <div className="sm:w-[50%]">
+          <div className="xl:w-[50%]">
             <p className="font-[500] opacity-50 mb-5">
               I can provide industrial design services for products, packaging,
               and other physical items. This includes 3D modeling, prototyping,
@@ -319,11 +319,11 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="bg-orange-200 border-gray-100 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between sm:flex-row flex-col">
+        <div className="bg-orange-200 border-gray-100 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between xl:flex-row flex-col">
           <div>
             <h3 className="font-[600] text-xl mb-2">Brand Design</h3>
           </div>
-          <div className="sm:w-[50%]">
+          <div className="xl:w-[50%]">
             <p className="font-[500] opacity-50 mb-5">
               If you are starting a new business or rebranding an existing one,
               I can help you create a brand identity that reflects your values
@@ -391,11 +391,11 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="bg-black text-white border-gray-100 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between sm:flex-row flex-col">
+        <div className="bg-black text-white border-gray-100 border-1 bg-bottom bg-cover rounded-lg mt-5 p-5 flex justify-between xl:flex-row flex-col">
           <div>
             <h3 className="font-[600] text-xl mb-2">Motion Design</h3>
           </div>
-          <div className="sm:w-[50%]">
+          <div className="xl:w-[50%]">
             <p className="font-[500] opacity-50 mb-5">
               I offer motion design services for advertising, marketing, and
               other promotional materials. This includes animation, video
@@ -485,9 +485,9 @@ export default function Services() {
 
         <hr className="w-full opacity-20 mt-10" />
 
-        <div className="bg-gray-100 border-gray-200 border-1 bg-bottom bg-cover rounded-lg my-10 p-5 flex justify-between sm:flex-row flex-col">
+        <div className="bg-gray-100 border-gray-200 border-1 bg-bottom bg-cover rounded-lg my-10 p-5 flex justify-between xl:flex-row flex-col">
           <h3 className="font-[600] text-xl mb-2">Retainer Contract</h3>
-          <div className="sm:w-[50%]">
+          <div className="xl:w-[50%]">
             <p className="font-[500] opacity-50 mb-5">
               If a single project is not enough, I offer a retainer contract.
               This allows you to have a dedicated designer on your team for a

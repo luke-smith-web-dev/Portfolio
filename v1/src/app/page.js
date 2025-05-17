@@ -226,7 +226,7 @@ export default function Home() {
   return (
     <div ref={(el) => (container = el)} style={{ overflowX: "hidden" }}>
       <nav
-        className="fixed top-0 left-0 right-0 flex sm:flex-row flex-col gap-5 items-center justify-between p-5 sm:px-[200px] bg-white px-[20px] border-b-[1px] border-black/10"
+        className="fixed top-0 left-0 right-0 flex xl:flex-row flex-col gap-5 items-center justify-between p-5 xl:px-[200px] bg-white px-[20px] border-b-[1px] border-black/10"
         data-aos="fade"
         data-aos-duration="2000"
         style={{ zIndex: 100 }}
@@ -291,9 +291,9 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="flex flex-col sm:h-[100vh] h-[80vh] justify-center">
-        <div className="flex justify-between w-full sm:px-[200px] px-[20px] pt-30">
-          <div className="hidden sm:flex flex-col justify-end">
+      <div className="flex flex-col xl:h-[100vh] h-[80vh] justify-center">
+        <div className="flex justify-between w-full xl:px-[200px] px-[20px] pt-30">
+          <div className="hidden xl:flex flex-col justify-end">
             <h2 className="blur-xl-hover">industrial design</h2>
             <h2 className="blur-xl-hover">ui/ux design</h2>
             <h2 className="blur-xl-hover">graphic design</h2>
@@ -303,7 +303,7 @@ export default function Home() {
             viewBox="0 0 618 550"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="test sm:m-0 mt-10 mx-auto"
+            className="test xl:m-0 mt-10 mx-auto"
           >
             <g opacity="0.05">
               <path
@@ -328,7 +328,7 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="flex flex-col justify-end sm:h-lvh">
+        <div className="flex flex-col justify-end xl:h-lvh">
           <svg
             width="100%"
             viewBox="0 0 1440 278"
@@ -369,14 +369,14 @@ export default function Home() {
               fill="black"
             />
           </svg>
-          <div className="flex justify-between sm:flex-row flex-col">
-            <div className="sm:pl-[50px] pl-0">
-              <h2 className="sm:block hidden blur-hover">
+          <div className="flex justify-between xl:flex-row flex-col">
+            <div className="xl:pl-[50px] pl-0">
+              <h2 className="xl:block hidden blur-hover">
                 Based in Missoula, MT
               </h2>
             </div>
-            <div className="flex items-end flex-col sm:pr-[10px] pr-0">
-              <h1 className="sm:mt-0 mt-5">Multidisciplinary Designer</h1>
+            <div className="flex items-end flex-col xl:pr-[10px] pr-0">
+              <h1 className="xl:mt-0 mt-5">Multidisciplinary Designer</h1>
             </div>
           </div>
           <br />
@@ -384,7 +384,7 @@ export default function Home() {
       </div>
 
       <div
-        className="sm:px-[200px] px-[50px] py-40"
+        className="xl:px-[200px] px-[50px] py-40"
         data-aos="fade"
         data-aos-duration="1500"
         id="proj"
@@ -430,7 +430,7 @@ export default function Home() {
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
-                className="sm:h-[620px] h-[250px]"
+                className="xl:h-[620px] h-[250px]"
                 placeholder="blur"
               ></Image>
 
@@ -447,7 +447,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="flex gap-5 sm:flex-row flex-col">
+          <div className="flex gap-5 xl:flex-row flex-col">
             <div className="w-full hover:-translate-y-2 transition">
               <Image
                 src={emailmarketinghub}
@@ -461,7 +461,7 @@ export default function Home() {
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
-                className="sm:h-[50vh] h-[250px]"
+                className="xl:h-[50vh] h-[250px]"
                 placeholder="blur"
               ></Image>
 
@@ -489,7 +489,7 @@ export default function Home() {
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
-                className="sm:h-[50vh] h-[250px]"
+                className="xl:h-[50vh] h-[250px]"
                 placeholder="blur"
               ></Image>
 
@@ -542,7 +542,7 @@ export default function Home() {
                 }}
                 data-aos="fade"
                 data-aos-duration="1500"
-                className="sm:h-[650px] h-[250px]"
+                className="xl:h-[650px] h-[250px]"
                 placeholder="blur"
               ></Image>
 
@@ -602,7 +602,7 @@ export default function Home() {
       </div>
 
       <div
-        className="sm:px-[200px] px-[50px] py-40"
+        className="xl:px-[200px] px-[50px] py-40"
         data-aos="fade"
         data-aos-duration="1500"
         id="about"
@@ -611,7 +611,7 @@ export default function Home() {
         <br />
         <br />
 
-        <p className="sm:text-3xl text-xl">
+        <p className="xl:text-3xl text-xl">
           Whether developing new concepts or improving old motifs, I design
           based on a variety of core principles of strategy by integrating fresh
           ideas with tried-and-true practices. I draw on a range of inspirations
@@ -621,14 +621,14 @@ export default function Home() {
       </div>
 
       <div
-        className="sm:px-[200px] px-[50px] pt-40 pb-10"
+        className="xl:px-[200px] px-[50px] pt-40 pb-10"
         data-aos="fade"
         data-aos-duration="1500"
         id="testimonials"
       >
         <HTwoAnimateIn>testimonials</HTwoAnimateIn>
       </div>
-      <div className="scrolls mb-40 sm:pl-[170px] pl-[0px]">
+      <div className="scrolls mb-40 xl:pl-[170px] pl-[0px]">
         <div className="p-5 border border-gray-200 rounded-sm scrolls-div w-[420px]">
           <div className="flex justify-between flex-col h-full">
             <div>
@@ -639,7 +639,7 @@ export default function Home() {
                 className="rounded-full"
               ></Image>
               <br />
-              <p style={{ textWrap: "wrap" }} className="sm:text-2xl">
+              <p style={{ textWrap: "wrap" }} className="xl:text-2xl">
                 Luke did a phenomenal job with our logo project. He took the
                 time to understand the brand, the product and went deeper asking
                 questions about our offering. He worked with us diligently,
@@ -667,7 +667,7 @@ export default function Home() {
                 className="rounded-full"
               ></Image>
               <br />
-              <p style={{ textWrap: "wrap" }} className="sm:text-2xl">
+              <p style={{ textWrap: "wrap" }} className="xl:text-2xl">
                 Luke did an amazing job creating a logo for my SaaS! He provided
                 multiple high-quality options, was super fast and communicative
                 throughout the process, and even went the extra mile by showing
@@ -693,7 +693,7 @@ export default function Home() {
                 className="rounded-full"
               ></Image>
               <br />
-              <p style={{ textWrap: "wrap" }} className="sm:text-2xl">
+              <p style={{ textWrap: "wrap" }} className="xl:text-2xl">
                 Luke Smith is an incredible designer with a sharp eye for detail
                 and creativity. He takes ideas and turns them into something
                 visually stunning. Every project we've worked on has been
@@ -709,7 +709,7 @@ export default function Home() {
       </div>
 
       <div
-        className="sm:h-lvh h-[80vh] w-full bg-[url(/contact-bg.png)] bg-center flex flex-col items-center justify-center gap-2 text-white"
+        className="xl:h-lvh h-[80vh] w-full bg-[url(/contact-bg.png)] bg-center flex flex-col items-center justify-center gap-2 text-white"
         data-aos="fade"
         data-aos-duration="1500"
         id="connect"
@@ -719,8 +719,8 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <div className="flex justify-between w-full sm:px-[200px] px-[50px] sm:flex-row flex-col">
-          <div className="flex flex-col sm:mb-0 mb-10">
+        <div className="flex justify-between w-full xl:px-[200px] px-[50px] xl:flex-row flex-col">
+          <div className="flex flex-col xl:mb-0 mb-10">
             <span>contact</span>
             <br />
             <a
@@ -740,7 +740,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="flex flex-col sm:mb-0 mb-10">
+          <div className="flex flex-col xl:mb-0 mb-10">
             <span>resume</span>
             <br />
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -757,13 +757,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="sm:py-[200px] pt-[200px] pb-[100px] sm:flex-row flex-col px-20 flex justify-between">
-        <div className="sm:mb-0 mb-10">
+      <div className="xl:py-[200px] pt-[200px] pb-[100px] xl:flex-row flex-col px-20 flex justify-between">
+        <div className="xl:mb-0 mb-10">
           <h1>Luke Smith</h1>
           <br />
           <p>Multidisciplinary designer based in Missoula, MT</p>
         </div>
-        <div className="sm:mb-0 mb-10">
+        <div className="xl:mb-0 mb-10">
           <span>on-site</span>
           <br />
           <a href="#top">home</a>
@@ -780,7 +780,7 @@ export default function Home() {
             resume
           </a>
         </div>
-        <div className="sm:mb-0 mb-10">
+        <div className="xl:mb-0 mb-10">
           <span>socials</span>
           <br />
           <a
@@ -808,7 +808,7 @@ export default function Home() {
           </a>
           <br />
         </div>
-        <div className="sm:mb-0 mb-10">
+        <div className="xl:mb-0 mb-10">
           <span>contact</span>
           <br />
           <a

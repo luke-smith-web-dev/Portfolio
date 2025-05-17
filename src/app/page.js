@@ -5,8 +5,8 @@ import Marquee from "react-fast-marquee";
 export default function Home() {
   return (
     <div>
-      <div className="mx-5 sm:mx-[30rem]">
-        <h1 className="text-3xl font-[500] my-15 sm:mr-30">
+      <div className="mx-5 xl:mx-[30rem]">
+        <h1 className="text-3xl font-[500] my-15 xl:mr-30">
           <span className="opacity-50">Building</span> products{" "}
           <span className="opacity-50">and</span> identities{" "}
           <span className="opacity-50">that people love for </span> startups{" "}

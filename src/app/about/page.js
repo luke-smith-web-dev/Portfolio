@@ -6,7 +6,7 @@ import { Gps, LinkedinLogo, XLogo } from "@phosphor-icons/react";
 export default function About() {
   return (
     <div>
-      <div className="mx-5 sm:mx-[30rem]">
+      <div className="mx-5 xl:mx-[30rem]">
         <div className="flex justify-between mt-5 flex-col relative">
           <div className="relative">
             <img
@@ -73,49 +73,49 @@ export default function About() {
           src="/alaska.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/blacktail.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/alogo.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/launch.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/pac2.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/designdevelop.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/nexity.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/portfoliotemplate.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
       </Marquee>
       <Marquee
@@ -129,43 +129,43 @@ export default function About() {
           src="/blackform.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/darkmatter.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/bluelight.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/lksmth.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/technovora.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/symbolsource.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
         <img
           src="/pac1.png"
           alt=""
           style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] sm:h-[300px]"
+          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
         />
       </Marquee>
       <div className="mt-4"></div>

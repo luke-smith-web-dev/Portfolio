@@ -28,7 +28,7 @@ export default function Wrapper({ children }) {
   }, []);
   return (
     <div>
-      <div className="mx-5 sm:mx-[30rem]">
+      <div className="mx-5 xl:mx-[30rem]">
         {/* nav bar */}
         <div className="flex justify-between items-center mt-10 flex-col w-full">
           <div className="flex justify-between items-center w-full">
@@ -50,19 +50,19 @@ export default function Wrapper({ children }) {
 
             <div className="flex gap-5 items-center flex-wrap justify-end">
               <a
-                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm sm:text-md"
+                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm xl:text-md"
                 href="/work"
               >
                 Work
               </a>
               <a
-                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm sm:text-md"
+                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm xl:text-md"
                 href="/services"
               >
                 Services
               </a>
               <a
-                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm sm:text-md"
+                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm xl:text-md"
                 href="/about"
               >
                 About
@@ -72,7 +72,7 @@ export default function Wrapper({ children }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="py-2 px-4 ml-1 bg-black text-white rounded-md font-[600] text-xs sm:text-sm cursor-pointer hover:bg-gray-700 transition duration-200">
+                <button className="py-2 px-4 ml-1 bg-black text-white rounded-md font-[600] text-xs xl:text-sm cursor-pointer hover:bg-gray-700 transition duration-200">
                   Book an Intro Call
                 </button>
               </a>
@@ -91,19 +91,19 @@ export default function Wrapper({ children }) {
       {children}
       <div className="mt-4"></div>
       <div className="m-4 bg-black text-white rounded-lg p-10">
-        <div className="flex justify-between sm:flex-row flex-col gap-5">
+        <div className="flex justify-between xl:flex-row flex-col gap-5">
           <div className="flex flex-col">
             <h1 className="text-3xl font-[600]">Luke Smith</h1>
           </div>
           <div className="flex flex-col">
-            <h2 className="text-lg sm:text-2xl font-[600]">
+            <h2 className="text-lg xl:text-2xl font-[600]">
               Building products and identities that people love for startups and
               brands.
             </h2>
           </div>
         </div>
 
-        <div className="flex justify-between mt-10 sm:mr-150">
+        <div className="flex justify-between mt-10 xl:mr-150">
           <div className="flex flex-col">
             <h3 className="font-[500] opacity-50">Pages</h3>
             <a className="text-lg font-[600] no-underline" href="/">
