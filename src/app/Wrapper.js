@@ -68,6 +68,12 @@ export default function Wrapper({ children }) {
                 About
               </a>
               <a
+                className="opacity-50 hover:opacity-100 font-[500] no-underline text-sm xl:text-md"
+                href="/resume.pdf"
+              >
+                Resume
+              </a>
+              <a
                 href="https://cal.com/blacktaildesign/30min"
                 target="_blank"
                 rel="noreferrer"
