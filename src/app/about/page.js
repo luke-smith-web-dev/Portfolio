@@ -9,10 +9,7 @@ export default function About() {
       <div className="mx-5 xl:mx-[30rem]">
         <div className="flex justify-between mt-5 flex-col relative">
           <div className="relative">
-            <img
-              src="https://pbs.twimg.com/profile_banners/1879238413586468865/1746283850/1500x500"
-              className="rounded-lg"
-            />
+            <img src="banner.png" className="rounded-lg" />
             <div className="flex absolute justify-between top-5 right-5 gap-5">
               <a
                 href="https://x.com/lukesmithdesign"
@@ -67,108 +64,34 @@ export default function About() {
           </button>
         </a>
       </div>
-      <div className="mt-20"></div>
+      <div className="mt-10"></div>
       <Marquee autoFill={true} gap={0} speed={50}>
         <img
-          src="/alaska.png"
+          src="/testimonial-cesar.png"
           alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/blacktail.png"
+          src="/testimonial-tom.png"
           alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/alogo.png"
+          src="/testimonial-tadeas.png"
           alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/launch.png"
+          src="/testimonial-joschua.png"
           alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/pac2.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/designdevelop.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/nexity.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/portfoliotemplate.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
         />
       </Marquee>
-      <Marquee
-        autoFill={true}
-        gap={0}
-        speed={50}
-        direction="right"
-        className="mt-4"
-      >
-        <img
-          src="/blackform.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/darkmatter.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/bluelight.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/lksmth.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/technovora.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/symbolsource.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-        <img
-          src="/pac1.png"
-          alt=""
-          style={{ width: "auto" }}
-          className="rounded-lg mx-2 h-[150px] xl:h-[300px]"
-        />
-      </Marquee>
-      <div className="mt-4"></div>
+      <div className="mt-8"></div>
     </div>
   );
 }

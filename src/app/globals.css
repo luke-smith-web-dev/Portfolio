@@ -172,3 +172,40 @@ a:not([class*="no-underline"]) {
 .hidden {
   display: none;
 }
+
+.marquee-container {
+  position: relative; /* Needed for positioning the gradient */
+  overflow: hidden; /* Hide the parts of the marquee that are outside the gradient */
+}
+
+.marquee-container::before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100px; /* Adjust the width of the fade effect as needed */
+  pointer-events: none; /* Allow interaction with the marquee content */
+  background: linear-gradient(
+    to left,
+    transparent,
+    white
+  ); /* Fade on the left side */
+}
+
+.marquee-container::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100px; /* Adjust the width of the fade effect as needed */
+  pointer-events: none; /* Allow interaction with the marquee content */
+  background: linear-gradient(
+    to right,
+    transparent,
+    white
+  ); /* Fade on the right side */
+}
