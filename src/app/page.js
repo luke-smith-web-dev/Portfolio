@@ -80,19 +80,19 @@ export default function Home() {
             <img
               src="/logos/underdog-labs.png"
               alt=""
-              style={{ width: "auto", height: "50px" }}
+              style={{ width: "auto", height: "30px" }}
               className="mx-5"
             />
             <img
               src="/logos/flowglanz.png"
               alt=""
-              style={{ width: "auto", height: "50px" }}
+              style={{ width: "auto", height: "30px" }}
               className="mx-5"
             />
             <img
               src="/logos/inquizo.png"
               alt=""
-              style={{ width: "auto", height: "50px" }}
+              style={{ width: "auto", height: "30px" }}
               className="mx-5"
             />
           </Marquee>
