@@ -14,7 +14,7 @@ export default function Work() {
         </div>
         <div className="flex justify-between mt-2 mb-10">
           <p className="opacity-50 text-sm font-[600]">Status:</p>
-          <p className="opacity-50 text-sm font-[500]">Work in Progress</p>
+          <p className="opacity-50 text-sm font-[500]">Completed</p>
         </div>
         <img
           src="/pac1.png"
@@ -39,6 +39,94 @@ export default function Work() {
           alt=""
           style={{ width: "100%", height: "auto" }}
           className="rounded-lg mt-5"
+        />
+      </div>
+      <div>
+        <div className="flex justify-between mt-10">
+          <h3 className="font-[600] text-2xl">Brees Visibility</h3>
+          <p className="opacity-50 text-lg font-[500]">2025</p>
+        </div>
+        <div className="flex justify-between mt-2">
+          <p className="opacity-50 text-lg font-[600]">Tools:</p>
+          <p className="opacity-50 text-md font-[500]">Figma, Framer</p>
+        </div>
+        <div className="flex justify-between mt-2 mb-10">
+          <p className="opacity-50 text-sm font-[600]">Status:</p>
+          <p className="opacity-50 text-sm font-[500]">Work in Progress</p>
+        </div>
+        <img
+          src="/brees-visible.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5"
+        />
+      </div>
+      <div>
+        <div className="flex justify-between mt-10">
+          <h3 className="font-[600] text-2xl">Inquizo</h3>
+          <p className="opacity-50 text-lg font-[500]">2025</p>
+        </div>
+        <div className="flex justify-between mt-2">
+          <p className="opacity-50 text-lg font-[600]">Tools:</p>
+          <p className="opacity-50 text-md font-[500]">Figma</p>
+        </div>
+        <div className="flex justify-between mt-2 mb-10">
+          <p className="opacity-50 text-sm font-[600]">Status:</p>
+          <p className="opacity-50 text-sm font-[500]">
+            Completed while at <a href="https://flowglanz.com/">Flowglanz</a>
+          </p>
+        </div>
+        <img
+          src="/inquizo.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+      </div>
+      <div>
+        <div className="flex justify-between mt-10">
+          <h3 className="font-[600] text-2xl">
+            X (Twitter) Banner Template Set
+          </h3>
+          <p className="opacity-50 text-lg font-[500]">2025</p>
+        </div>
+        <div className="flex justify-between mt-2">
+          <p className="opacity-50 text-lg font-[600]">Tools:</p>
+          <p className="opacity-50 text-md font-[500]">Figma</p>
+        </div>
+        <div className="flex justify-between mt-2 mb-10">
+          <p className="opacity-50 text-sm font-[600]">Status:</p>
+          <p className="opacity-50 text-sm font-[500]">Completed</p>
+        </div>
+        <img
+          src="/vicinity.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/alaska.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/noisyvibrance.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/designdevelop.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/bluelight.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
         />
       </div>
       <div>

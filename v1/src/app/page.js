@@ -792,7 +792,7 @@ export default function Home() {
           </a>
           <br />
           <a
-            href="https://x.com/lukesmithdesign"
+            href="https://x.com/lukesmithdsgn"
             target="_blank"
             rel="noopener noreferrer"
           >

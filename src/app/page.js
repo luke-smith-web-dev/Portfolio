@@ -8,7 +8,9 @@ export default function Home() {
     <div>
       <div className="mx-5 xl:mx-[30rem]">
         <div className="flex justify-between mt-15 mb-5 opacity-50">
-          <h4 className="font-[500]">Loved by 15+ brands and agencies</h4>
+          <h4 className="font-[500]">
+            Trusted by 20+ brands and agencies. Are you next?
+          </h4>
         </div>
         <h1 className="text-3xl font-[500] mb-15 xl:mr-30">
           <span className="opacity-50">Building</span> products{" "}
@@ -70,12 +72,6 @@ export default function Home() {
               className="mx-5"
             />
             <img
-              src="/logos/lksmth.png"
-              alt=""
-              style={{ width: "auto", height: "30px" }}
-              className="mx-5"
-            />
-            <img
               src="/logos/pulse-ai.png"
               alt=""
               style={{ width: "auto", height: "30px" }}
@@ -83,6 +79,18 @@ export default function Home() {
             />
             <img
               src="/logos/underdog-labs.png"
+              alt=""
+              style={{ width: "auto", height: "50px" }}
+              className="mx-5"
+            />
+            <img
+              src="/logos/flowglanz.png"
+              alt=""
+              style={{ width: "auto", height: "50px" }}
+              className="mx-5"
+            />
+            <img
+              src="/logos/inquizo.png"
               alt=""
               style={{ width: "auto", height: "50px" }}
               className="mx-5"
@@ -132,6 +140,18 @@ export default function Home() {
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"
         />
+        <img
+          src="/inquizo.png"
+          alt=""
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
+        />
+        <img
+          src="/nimbus.png"
+          alt=""
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
+        />
       </Marquee>
       <div className="mt-8"></div>
       <Marquee autoFill={true} gap={0} speed={50} direction="right">
@@ -160,13 +180,19 @@ export default function Home() {
           className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/hue.png"
+          src="/alexzhao.png"
           alt=""
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/alexzhao.png"
+          src="/brees-visible.png"
+          alt=""
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
+        />
+        <img
+          src="/grain.png"
           alt=""
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"

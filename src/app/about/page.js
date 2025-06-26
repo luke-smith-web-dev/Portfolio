@@ -12,7 +12,7 @@ export default function About() {
             <img src="banner.png" className="rounded-lg" />
             <div className="flex absolute justify-between top-5 right-5 gap-5">
               <a
-                href="https://x.com/lukesmithdesign"
+                href="https://x.com/lukesmithdsgn"
                 target="_blank"
                 rel="noreferrer"
                 className="opacity-75 hover:opacity-100 transition duration-200 no-underline text-white"
