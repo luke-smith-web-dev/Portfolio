@@ -90,6 +90,12 @@ export default function About() {
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"
         />
+        <img
+          src="/testimonial-isaiah.png"
+          alt=""
+          style={{ width: "auto", height: "300px" }}
+          className="rounded-lg mx-4 border-1 border-gray-200"
+        />
       </Marquee>
       <div className="mt-8"></div>
     </div>
