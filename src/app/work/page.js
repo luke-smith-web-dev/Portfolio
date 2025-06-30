@@ -64,7 +64,7 @@ export default function Work() {
           src="/opalm1drawing.png"
           alt=""
           style={{ width: "100%", height: "auto" }}
-          className="rounded-lg mt-5"
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
         />
       </div>
       <div>
@@ -112,17 +112,43 @@ export default function Work() {
         </div>
         <div className="flex justify-between mt-2">
           <p className="opacity-50 text-lg font-[600]">Tools:</p>
-          <p className="opacity-50 text-md font-[500]">Figma, Framer</p>
+          <p className="opacity-50 text-md font-[500]">
+            Figma, Framer, Midjourney
+          </p>
         </div>
         <div className="flex justify-between mt-2 mb-10">
           <p className="opacity-50 text-sm font-[600]">Status:</p>
-          <p className="opacity-50 text-sm font-[500]">Work in Progress</p>
+          <p className="opacity-50 text-sm font-[500]">Completed</p>
         </div>
         <img
-          src="/brees-visible.png"
+          src="/breesvisibility1.png"
           alt=""
           style={{ width: "100%", height: "auto" }}
-          className="rounded-lg mt-5"
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/breesvisibility2.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/breesvisibility3.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/breesvisibility4.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
+        />
+        <img
+          src="/breesvisibility5.png"
+          alt=""
+          style={{ width: "100%", height: "auto" }}
+          className="rounded-lg mt-5 border-[1px] border-gray-200"
         />
       </div>
       <div>

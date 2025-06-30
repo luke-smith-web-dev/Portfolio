@@ -186,7 +186,7 @@ export default function Home() {
           className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/brees-visible.png"
+          src="/breesvisibility1.png"
           alt=""
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"
