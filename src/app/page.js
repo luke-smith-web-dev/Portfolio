@@ -46,7 +46,7 @@ export default function Home() {
         </div>
 
         <div className="marquee-container my-10">
-          <Marquee autoFill={true} gap={600} speed={35}>
+          <Marquee autoFill={true} gap={600} speed={35} direction="right">
             <img
               src="/logos/isaiah-brees.png"
               alt=""
