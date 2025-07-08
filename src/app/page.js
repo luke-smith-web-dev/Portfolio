@@ -28,7 +28,7 @@ export default function Home() {
           >
             <button className="py-2 pl-2 pr-6 bg-black text-white rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-700 transition duration-200">
               <img
-                src="https://creatorspace.imgix.net/users/cm9lqnyse00wsla01h03g4ybz/dmJ3K3zHsLeefwGK-sOGuMX_D_400x400.jpg?w=300&h=300"
+                src="/profile.jpg"
                 className="w-[40px] h-auto rounded-sm"
               ></img>
               Book a Free Intro Call

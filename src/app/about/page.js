@@ -31,10 +31,7 @@ export default function About() {
             </div>
           </div>
           <div className="bg-white rounded-lg p-1 transform absolute bottom-[-50px] left-[25px] flex items-center justify-center">
-            <img
-              src="https://creatorspace.imgix.net/users/cm9lqnyse00wsla01h03g4ybz/dmJ3K3zHsLeefwGK-sOGuMX_D_400x400.jpg?w=300&h=300"
-              className="w-[100] h-auto rounded-lg"
-            ></img>
+            <img src="/profile.jpg" className="w-[100] h-auto rounded-lg"></img>
           </div>
         </div>
 
