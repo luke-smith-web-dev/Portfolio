@@ -21,15 +21,15 @@ export default function Home() {
 
         <div className="flex justify-start gap-5">
           <a
-            href="https://cal.com/blacktaildesign/30min"
+            href="https://cal.com/northpoint/30min"
             target="_blank"
             rel="noreferrer"
             className="no-underline"
           >
             <button className="py-2 pl-2 pr-6 bg-black text-white rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-700 transition duration-200">
               <img
-                src="/profile.jpg"
-                className="w-[40px] h-auto rounded-sm"
+                src="/main-profile.jpg"
+                className="w-[40px] h-auto rounded-sm border-1 border-gray-800"
               ></img>
               Book a Free Intro Call
             </button>

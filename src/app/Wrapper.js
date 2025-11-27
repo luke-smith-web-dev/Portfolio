@@ -74,7 +74,7 @@ export default function Wrapper({ children }) {
                 Resume
               </a>
               <a
-                href="https://cal.com/blacktaildesign/30min"
+                href="https://cal.com/northpoint/30min"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -126,7 +126,7 @@ export default function Wrapper({ children }) {
             </a>
             <a
               className="text-lg font-[600] no-underline"
-              href="https://cal.com/blacktaildesign/30min"
+              href="https://cal.com/northpoint/30min"
               rel="noreferrer"
               target="_blank"
             >
@@ -145,7 +145,7 @@ export default function Wrapper({ children }) {
             </a>
             <a
               className="text-lg font-[600] no-underline"
-              href="https://x.com/lukesmithdesign"
+              href="https://x.com/thelukesmith_"
               rel="noreferrer"
               target="_blank"
             >

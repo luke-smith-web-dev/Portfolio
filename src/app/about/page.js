@@ -12,7 +12,7 @@ export default function About() {
             <img src="banner.png" className="rounded-lg" />
             <div className="flex absolute justify-between top-5 right-5 gap-5">
               <a
-                href="https://x.com/lukesmithdsgn"
+                href="https://x.com/thelukesmith_"
                 target="_blank"
                 rel="noreferrer"
                 className="opacity-75 hover:opacity-100 transition duration-200 no-underline text-white"
@@ -31,7 +31,10 @@ export default function About() {
             </div>
           </div>
           <div className="bg-white rounded-lg p-1 transform absolute bottom-[-50px] left-[25px] flex items-center justify-center">
-            <img src="/profile.jpg" className="w-[100] h-auto rounded-lg"></img>
+            <img
+              src="/main-profile.jpg"
+              className="w-[100] h-auto rounded-lg"
+            ></img>
           </div>
         </div>
 
@@ -46,12 +49,15 @@ export default function About() {
         </div>
         <p className="text-lg font-[500] mb-10">
           Building products and identities that people love for startups and
-          brands. Running <a href="https://x.com/blacktaildesign">Blacktail</a>,
-          a design studio based in Missoula, Montana.
+          brands. Running{" "}
+          <a href="https://northpoint.design" target="_blank" rel="noreferrer">
+            Northpoint Design
+          </a>
+          , an industrial design studio based in Missoula, Montana.
         </p>
 
         <a
-          href="https://cal.com/blacktaildesign/30min"
+          href="https://cal.com/northpoint/30min"
           target="_blank"
           rel="noreferrer"
           className="mb-15 no-underline"
