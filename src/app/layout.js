@@ -16,7 +16,7 @@ export const metadata = {
   title: "Luke Smith",
   description:
     "Building products and identities that people love for startups and brands.",
-  metadataBase: new URL("https://luke-smith.design"),
+  metadataBase: new URL("https://luke-smith.xyz"),
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",

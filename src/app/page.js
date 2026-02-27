@@ -8,25 +8,41 @@ export default function Home() {
     <div>
       <div className="mx-5 xl:mx-[30rem]">
         <div className="flex justify-between mt-15 mb-5 opacity-50">
-          <h4 className="font-[500]">
-            Trusted by 20+ brands and agencies. Are you next?
+          <h4 className="font-[500] mono text-sm text-center w-full">
+            Currently building{" "}
+            <a href="https://indefense.substack.com/">In Defense</a> · Head of
+            Design at <a href="https://www.flowglanz.com/">Flowglanz</a>
           </h4>
         </div>
-        <h1 className="text-3xl font-[500] mb-15 xl:mr-30">
-          <span className="opacity-50">Building</span> products{" "}
-          <span className="opacity-50">and</span> identities{" "}
-          <span className="opacity-50">that people love for </span> startups{" "}
-          <span className="opacity-50">and</span> brands.
+        <h1 className="text-center">
+          I design things
+          <br />
+          that{" "}
+          <span className="mono font-[600] text-[5.5rem] italic">ship</span>.
         </h1>
+        <h3 className="font-[500] opacity-50 my-5 text-center">
+          Product designer for startups that need speed, clarity, and real
+          execution.
+        </h3>
+        <br />
 
-        <div className="flex justify-start gap-5">
+        <div className="flex justify-center gap-5">
           <a
             href="https://cal.com/northpoint/30min"
             target="_blank"
             rel="noreferrer"
             className="no-underline"
           >
-            <button className="py-2 pl-2 pr-6 bg-black text-white rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-700 transition duration-200">
+            <button className="pl-6 pr-2 h-full bg-[#ff4800] text-white rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-[#e03f00] transition duration-200">
+              See My Work
+              <div className="flex items-center justify-center w-[40px] h-[40px] text-[#ff4800] bg-white rounded-sm">
+                <ArrowRight size={20} />
+              </div>
+            </button>
+          </a>
+
+          <a href="/work" className="no-underline">
+            <button className="py-2 pl-2 pr-6 border-[1px] border-gray-200 text-black rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-100 transition duration-200">
               <img
                 src="/main-profile.jpg"
                 className="w-[40px] h-auto rounded-sm border-1 border-gray-800"
@@ -34,37 +50,16 @@ export default function Home() {
               Book a Free Intro Call
             </button>
           </a>
-
-          <a href="/work" className="no-underline">
-            <button className="pl-6 pr-2 h-full border-[1px] border-gray-200 text-black rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-100 transition duration-200">
-              See My Work
-              <div className="flex items-center justify-center w-[40px] h-[40px] bg-black text-white rounded-sm">
-                <ArrowRight size={20} />
-              </div>
-            </button>
-          </a>
         </div>
 
-        <div className="marquee-container my-10">
+        <br />
+        <br />
+        <p className="text-sm font-[500] mono opacity-50 text-center">
+          Product design shipped with teams at:
+        </p>
+        <br />
+        <div className="marquee-container mb-10">
           <Marquee autoFill={true} gap={600} speed={35} direction="right">
-            <img
-              src="/logos/isaiah-brees.png"
-              alt=""
-              style={{ width: "auto", height: "30px" }}
-              className="mx-5"
-            />
-            <img
-              src="/logos/Blacktail.png"
-              alt=""
-              style={{ width: "auto", height: "30px" }}
-              className="mx-5"
-            />
-            <img
-              src="/logos/nexus.png"
-              alt=""
-              style={{ width: "auto", height: "30px" }}
-              className="mx-5"
-            />
             <img
               src="/logos/postel.png"
               alt=""
@@ -90,7 +85,19 @@ export default function Home() {
               className="mx-5"
             />
             <img
-              src="/logos/inquizo.png"
+              src="/logos/citydetect.png"
+              alt=""
+              style={{ width: "auto", height: "30px" }}
+              className="mx-5"
+            />
+            <img
+              src="/logos/writingroomlogo.png"
+              alt=""
+              style={{ width: "auto", height: "30px" }}
+              className="mx-5"
+            />
+            <img
+              src="/logos/wswlogo.png"
               alt=""
               style={{ width: "auto", height: "30px" }}
               className="mx-5"
@@ -111,7 +118,7 @@ export default function Home() {
       <div className="mt-20"></div>
       <Marquee autoFill={true} gap={0} speed={50}>
         <img
-          src="/cal-ai.png"
+          src="/citydetectwebsite.png"
           alt=""
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"
@@ -123,7 +130,7 @@ export default function Home() {
           className="rounded-lg mx-4 border-1 border-gray-200"
         />
         <img
-          src="/spotline.png"
+          src="/webshopwealthy.png"
           alt=""
           style={{ width: "auto", height: "300px" }}
           className="rounded-lg mx-4 border-1 border-gray-200"

@@ -38,17 +38,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex justify-between mt-15 mb-4">
+        <div className="flex justify-between mt-15 mb-4 align-bottom">
           <h1 className="text-2xl font-[600] w-[100%]">
             Web/Industrial Designer
           </h1>
-          <div className="flex gap-2 items-center w-[100%] justify-end">
-            <Gps size={25} />
-            <span className="font-[500] text-md">Missoula, MT</span>
-          </div>
         </div>
         <p className="text-lg font-[500] mb-10">
-          Building products and identities that people love for startups and
+          Designing products and experiences that people love for startups and
           brands. Running{" "}
           <a href="https://northpoint.design" target="_blank" rel="noreferrer">
             Northpoint Design
@@ -56,16 +52,22 @@ export default function About() {
           , an industrial design studio based in Missoula, Montana.
         </p>
 
-        <a
-          href="https://cal.com/northpoint/30min"
-          target="_blank"
-          rel="noreferrer"
-          className="mb-15 no-underline"
-        >
-          <button className="py-2 px-4 bg-black text-white rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-700 transition duration-200">
-            Book an Intro Call
-          </button>
-        </a>
+        <div className="mb-15 flex gap-5">
+          <a
+            href="https://cal.com/northpoint/30min"
+            target="_blank"
+            rel="noreferrer"
+            className="no-underline w-fit"
+          >
+            <button className="py-2 px-4 bg-black text-white rounded-md font-[600] flex gap-4 items-center cursor-pointer hover:bg-gray-700 transition duration-200">
+              Book an Intro Call
+            </button>
+          </a>
+          <div className="flex gap-2 items-center">
+            <Gps size={20} />
+            <span className="font-[500] text-sm">Missoula, MT</span>
+          </div>
+        </div>
       </div>
       <div className="mt-10"></div>
       <Marquee autoFill={true} gap={0} speed={50}>
